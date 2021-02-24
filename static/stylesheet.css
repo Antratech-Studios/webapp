@@ -96,36 +96,41 @@
 .right-col {
     background-color: #1c7430;
 }
-.vert-90{
-  transform: rotate(-90deg);
+
+.vert-90 {
+    transform: rotate(-90deg);
+
 }
+
 /*vertical text*/
-.vertical-text , .text-bar {
-    /*transform: rotate(-90deg);*/
+.vertical-text, .text-bar {
+    transform: rotate(-90deg);
     transform-origin: right bottom 0;
 
     display: inline-flex;
     float: right;
     position: absolute;
     right: 30px;
-  text-align: left;
-font: normal normal bold 31px/41px Segoe UI;
-letter-spacing: 0px;
-color: #0511F2;
-opacity: 1;
+    text-align: left;
+    font: normal normal bold 31px/41px Segoe UI;
+    letter-spacing: 0px;
+    color: #0511F2;
+    opacity: 1;
 }
 
-.text-bar{
-  width: 3px;
-height: 210px;
-border: none;
-opacity: 1;
+.text-bar {
+    width: 3px;
+    height: 210px;
+    border: none;
+    opacity: 1;
+    background: #0511F2;
 }
+
 /*titles*/
 
 .title-block {
     margin-top: 20px;
-    margin-left: 93px;
+    /*margin-left: 93px;*/
     width: 399px;
     height: 461px;
     text-align: left;
@@ -133,4 +138,91 @@ opacity: 1;
     letter-spacing: 0px;
     color: #0511F2;
     opacity: 1;
+    margin: 0 0 30px 0;
+}
+
+.vert-section {
+    transform: rotate(-90deg);
+    transform-origin: right bottom 0;
+    display: inline-flex;
+    float: right;
+    position: absolute;
+    right: 30px;
+    text-align: left;
+    font: normal normal bold 31px/41px Segoe UI;
+    letter-spacing: 0px;
+    color: #0511F2;
+    opacity: 1;
+}
+
+.vert-line {
+    display: block;
+    width: 50%;
+    position: relative;
+    text-align: right;
+}
+
+.vert-line:after {
+    /* this is the black line */
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    right: 44px;
+    top: 50%;
+    border-top: 3px solid #0511F2;
+    z-index: 1;
+}
+
+.line-hide {
+    /* this is to cover the black line under the text*/
+    position: relative;
+    display: inline-block;
+    padding-left: 10px; /* however much space you want before the line */
+    /*background-color: #ffffff; !* bacground colour of the page - hides the line *!*/
+    z-index: 2;
+    margin-left: 70px;
+}
+
+/*text wrapper*/
+.sm-text-wrapper {
+    width: 566px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.landing-text-block {
+    padding: 0px 93px 0px 93px;
+}
+
+/*sections*/
+
+.service-section-left {
+    background-color: #0511F2;
+}
+
+.service-section-right {
+    background-color: #262626;
+}
+
+/*blocks*/
+.service-block {
+    color: white;
+    /*margin: 150px 0 0 0;*/
+    text-align: left;
+    letter-spacing: 0px;
+    opacity: 1;
+    padding-top: 35px;
+}
+
+.section-title{
+    font-family: "Yu Gothic UI Semibold";
+    font-size: 50px;
+}
+
+
+.number{
+    font-family: 'Swis721 BdOul BT';
+    font-size: 24px;
+    top: -40px;
 }
