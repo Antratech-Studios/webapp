@@ -1,5 +1,30 @@
-/*burger menu*/
+@namespace xlink 'http://www.w3.org/1999/xlink';
+svg image[xlink|href*="temp"] {
+    outline: 3px solid red;
+}
+.footer, .service-block ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    height: 70px;
+}
+
+/*burger menu*/
+.top-navigation {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+}
 
 /* Icon 1 */
 
@@ -24,7 +49,7 @@
     position: absolute;
     height: 6px;
     width: 80%;
-    background-color: #0511F2;
+    background-color: black;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -129,16 +154,16 @@
 /*titles*/
 
 .title-block {
-    margin-top: 20px;
     /*margin-left: 93px;*/
     width: 399px;
     height: 461px;
     text-align: left;
-    font: normal normal bold 100px/164px Yu Gothic UI;
+    font-family: "Yu Gothic UI Semibold";
+    font-size: 100px;
     letter-spacing: 0px;
     color: #0511F2;
     opacity: 1;
-    margin: 0 0 30px 0;
+    margin: 100px 0 30px 0;
 }
 
 .vert-section {
@@ -185,10 +210,21 @@
 }
 
 /*text wrapper*/
-.sm-text-wrapper {
-    width: 566px;
+.sm-text-wrapper, .testimonial-wrapper {
+    width: auto;
     flex-wrap: wrap;
     display: flex;
+}
+
+.testimonial-wrapper {
+    bottom: 120px;
+    position: absolute;
+    color: white;
+}
+
+.text-sup {
+    font-family: fantasy;
+    font-size: 100px;
 }
 
 .landing-text-block {
@@ -198,16 +234,16 @@
 /*sections*/
 
 .service-section-left {
-    background-color: #0511F2;
+    background-color: #262626;
 }
 
 .service-section-right {
-    background-color: #262626;
+    background-color: #707070;
 }
 
 /*blocks*/
 .service-block {
-    color: white;
+    color: #11FBCC;
     /*margin: 150px 0 0 0;*/
     text-align: left;
     letter-spacing: 0px;
@@ -215,14 +251,96 @@
     padding-top: 35px;
 }
 
-.section-title{
+.section-title {
     font-family: "Yu Gothic UI Semibold";
     font-size: 50px;
 }
 
 
-.number{
+.number {
     font-family: 'Swis721 BdOul BT';
     font-size: 24px;
     top: -40px;
 }
+
+.service-block p {
+    color: white;
+}
+
+.footer > div {
+    background-color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+div.footer.service-section-left > .service-block {
+    color: white;
+    margin-top: 91px;
+}
+
+#menu {
+    display: none;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 70;
+}
+
+#menu .section-title {
+    font-size: 40px;
+    color: white;
+}
+
+#menu p {
+    color: white;
+}
+
+#menu li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.founder {
+    background-repeat: no-repeat;
+    background-image: url(mugshot.png);
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: #00000066;
+}
+
+/*banner*/
+
+div .vert-banner{
+    border: white;
+    border-left: 2px;
+    border-right: 2px;
+    background-color: #262626;
+    color: white;
+    border-style: none solid none solid;
+    display: flex;
+    align-items: center;
+}
+
+.banner-wrapper{
+        width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+}
+.logo-bg{
+    background-image: url("bg.svg");
+}
+
+
+/*pages*/
+#service-page{
+    overflow: hidden;
+}
+
+
+div.
