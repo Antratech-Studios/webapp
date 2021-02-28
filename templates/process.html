@@ -1,10 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}{{ super() }}{% endblock %}
+
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+
+
+
+
+{% block nav %}
+    {{ super() }}
+{% endblock %}
+
+{% block sidebar %}
+    {{ super() }}
+{% endblock %}
+
+
+
+{% block body %}
+    <div id="process-page">
+        {% include 'burger_menu.html' %}
+
+        <div class="row vh-100">
+            <div class="vert-banner  d-flex flex-column col-md-3 col-lg-3 col-sm-3 col-xl-3">
+                <div class="half-num number">01</div>
+
+                <div class="banner-wrapper">
+                    <div class="banner-text">
+                        <div class="service-block p-20 ">
+
+                            <div class="subtitle black">Initial Meeting.</div>
+                            <div class="sm-text-wrapper">
+                                <p class="body black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consectetur dolorem nam nostrum quam,
+                                    sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla,
+                                    quisquam
+                                    reprehenderit? Dolores fuga officia quam repellendus!</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="vert-banner d-flex flex-column col-md-3 col-lg-3 col-sm-3 col-xl-3">
+                <div class="half-num number">02</div>
+                <div class="banner-wrapper">
+                    <div class="banner-text">
+                        <div class="service-block p-20 ">
+
+                            <div class="subtitle black">Discovery.</div>
+                            <div class="sm-text-wrapper">
+                                <p class="body black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consectetur dolorem nam nostrum quam,
+                                    sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla,
+                                    quisquam
+                                    reprehenderit? Dolores fuga officia quam repellendus!</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="vert-banner d-flex flex-column col-md-3 col-lg-3 col-sm-3 col-xl-3">
+                <div class="half-num number">03</div>
+                <div class="banner-wrapper">
+                    <div class="banner-text">
+                        <div class="service-block p-20 ">
+
+                            <div class="subtitle black">Design & Development.</div>
+                            <div class="sm-text-wrapper">
+                                <p class="body black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consectetur dolorem nam nostrum quam,
+                                    sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla,
+                                    quisquam
+                                    reprehenderit? Dolores fuga officia quam repellendus!</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="vert-banner d-flex flex-column col-md-3 col-lg-3 col-sm-3 col-xl-3">
+                <div class="half-num number">04</div>
+                <div class="banner-wrapper">
+
+                    <div class="banner-text">
+                        <div class="service-block p-20 ">
+
+                            <div class="subtitle black">Delivery.</div>
+                            <div class="sm-text-wrapper">
+                                <p class="body black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consectetur dolorem nam nostrum quam,
+                                    sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla,
+                                    quisquam
+                                    reprehenderit? Dolores fuga officia quam repellendus!</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+{% block script %}
+    {{ super() }}
+
+{% endblock %}
+

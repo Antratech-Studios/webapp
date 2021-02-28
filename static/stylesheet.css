@@ -1,7 +1,69 @@
 @namespace xlink 'http://www.w3.org/1999/xlink';
+
+@font-face {
+    font-family: GothamPro;
+    src: url(GothamPro.ttf);
+}
+
+@font-face {
+    font-family: Inc;
+    src: url(Inc.ttf);
+}
+
+@font-face {
+    font-family: GothamProLight;
+    src: url(GothamProLight.ttf);
+}
+
+@font-face {
+    font-family: GothamProRegular;
+    src: url(GothamProRegular.ttf);
+}
+
+nav {
+    padding: 0;
+!important
+}
+
+.top-navigation div.container {
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 svg image[xlink|href*="temp"] {
     outline: 3px solid red;
 }
+
+.body-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.85;
+    letter-spacing: .2px;
+    max-width: 600px;
+}
+
+.text-container {
+    padding: 5%;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+
+}
+
+.center-col div.text-container {
+    margin: 0px;
+    width: 100%;
+}
+
 .footer, .service-block ul li a {
     display: block;
     color: white;
@@ -11,12 +73,28 @@ svg image[xlink|href*="temp"] {
 
 }
 
+.body-text a{
+    text-decoration: none;
+    text-underline: none;
+    color: black;
+}
 a:hover {
     text-decoration: none;
+    text-underline: none;
+}
+.body-text a:hover {
+    text-decoration: none;
+    text-underline: none;
+    color: #0511F2;
 }
 
 .navbar {
     height: 70px;
+    padding: 0 6% 0 6%;
+}
+
+.top-navigation div.navbar {
+    padding: 0 6% 0 6%;
 }
 
 /*burger menu*/
@@ -29,10 +107,12 @@ a:hover {
 /* Icon 1 */
 
 #burger-container {
-    width: 60px;
-    margin-left: auto;
-    height: fit-content;
-    position: relative;
+    padding: 10px;
+    /*right: 0;*/
+    width: 50%;
+    /*margin-left: auto;*/
+    height: max-content;
+    /*position: absolute;*/
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -44,11 +124,11 @@ a:hover {
     cursor: crosshair;
 }
 
-#burger-container span {
-    display: block;
-    position: absolute;
-    height: 6px;
-    width: 80%;
+#burger-container div.burger-tab {
+    /*display: block;*/
+    position: relative;
+    height: 3px;
+    width: 100%;
     background-color: black;
     opacity: 1;
     left: 0;
@@ -62,27 +142,27 @@ a:hover {
     transition: .25s ease-in-out;
 }
 
-#burger-container span:hover {
-    background: black;
+#burger-container div.burger-tab:hover {
+    background: #0511F2;
     width: 100%;
 
 
 }
 
 
-#burger-container span:nth-child(1) {
+#burger-container div.burger-tab:nth-child(1) {
     top: 0px;
 }
 
-#burger-container span:nth-child(2) {
-    top: 18px;
+#burger-container div.burger-tab:nth-child(2) {
+    top: 12px;
 }
 
-#burger-container span:nth-child(3) {
-    top: 36px;
+#burger-container div.burger-tab:nth-child(3) {
+    top: 24px;
 }
 
-#burger-container.open span:nth-child(1) {
+#burger-container.open div.burger-tab:nth-child(1) {
     top: 18px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
@@ -90,12 +170,12 @@ a:hover {
     transform: rotate(135deg);
 }
 
-#burger-container.open span:nth-child(2) {
+#burger-container.open div.burger-tab:nth-child(2) {
     opacity: 0;
     left: -60px;
 }
 
-#burger-container.open span:nth-child(3) {
+#burger-container.open div.burger-tab:nth-child(3) {
     top: 18px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
@@ -109,6 +189,11 @@ a:hover {
 
 .landing {
     background-color: #f2f2f2;
+    background-image: url("bg.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.body-bg {
     background-image: url("bg.svg");
     background-repeat: no-repeat;
     background-position: right;
@@ -155,15 +240,19 @@ a:hover {
 
 .title-block {
     /*margin-left: 93px;*/
-    width: 399px;
-    height: 461px;
+
     text-align: left;
-    font-family: "Yu Gothic UI Semibold";
+    font-family: "GothamPro";
     font-size: 100px;
     letter-spacing: 0px;
-    color: #0511F2;
+    color: black;
     opacity: 1;
-    margin: 100px 0 30px 0;
+}
+
+.title {
+    font-size: 50px;
+    font-family: "GothamPro";
+
 }
 
 .vert-section {
@@ -182,7 +271,7 @@ a:hover {
 
 .vert-line {
     display: block;
-    width: 50%;
+    width: 80%;
     position: relative;
     text-align: right;
 }
@@ -211,9 +300,10 @@ a:hover {
 
 /*text wrapper*/
 .sm-text-wrapper, .testimonial-wrapper {
-    width: auto;
+    width: 100%;
     flex-wrap: wrap;
     display: flex;
+
 }
 
 .testimonial-wrapper {
@@ -228,7 +318,7 @@ a:hover {
 }
 
 .landing-text-block {
-    padding: 0px 93px 0px 93px;
+    /*padding: 0px 93px 0px 93px;*/
 }
 
 /*sections*/
@@ -243,39 +333,38 @@ a:hover {
 
 /*blocks*/
 .service-block {
-    color: #11FBCC;
-    /*margin: 150px 0 0 0;*/
     text-align: left;
     letter-spacing: 0px;
     opacity: 1;
-    padding-top: 35px;
 }
 
 .section-title {
-    font-family: "Yu Gothic UI Semibold";
-    font-size: 50px;
+    font-family: "GothamPro";
 }
 
 
 .number {
-    font-family: 'Swis721 BdOul BT';
+    font-family: 'Inc';
     font-size: 24px;
     top: -40px;
 }
 
 .service-block p {
-    color: white;
+    /*color: white;*/
 }
+
+
 
 .footer > div {
     background-color: black;
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
-    bottom: 0;
     width: 100%;
+    top: auto;
+
 }
 
 div.footer.service-section-left > .service-block {
@@ -316,31 +405,281 @@ div.footer.service-section-left > .service-block {
 
 /*banner*/
 
-div .vert-banner{
+div .vert-banner {
     border: white;
     border-left: 2px;
     border-right: 2px;
-    background-color: #262626;
-    color: white;
+    background-color: #f2f2f2;
+    color: black;
     border-style: none solid none solid;
     display: flex;
     align-items: center;
 }
 
-.banner-wrapper{
-        width: 100%;
+.banner-wrapper {
+    width: 100%;
     flex-wrap: wrap;
     display: flex;
 }
-.logo-bg{
+
+.logo-bg {
     background-image: url("bg.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 
 /*pages*/
-#service-page{
+#service-page {
     overflow: hidden;
 }
 
 
-div.
+span.number > div.section-title {
+    font-size: 30px;
+}
+
+/*paddings*/
+
+.p-20 {
+    padding: 0 24px 0 24px;
+}
+
+/*texts*/
+.subtitle {
+    font-size: 30px;
+    font-family: "GothamPro";
+
+}
+
+.body {
+    font-size: 15px;
+    font-family: "GothamProRegular";
+}
+
+/*misc*/
+.hori-line {
+    display: block;
+    position: relative;
+    text-align: right;
+    /* left: -20px; */
+    width: 20%;
+}
+
+
+.hori-section {
+    /*transform-origin: right bottom 0;*/
+    /*display: inline-flex;*/
+    /*float: right;*/
+    /*position: absolute;*/
+    /*right: 30px;*/
+    /*text-align: left;*/
+    /*font: normal normal bold 31px/41px Segoe UI;*/
+    /*letter-spacing: 0px;*/
+    color: black;
+    opacity: 1;
+    font-family: "GothamPro";
+}
+
+.hori-line::after {
+    content: '';
+    display: block;
+    width: 80%;
+    position: absolute;
+    right: 44px;
+    top: 50%;
+    border-top: 3px solid #0511F2;
+    z-index: 1;
+}
+
+.hori-line-hide {
+    /* this is to cover the black line under the text*/
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    background-color: #f2f2f2;
+    z-index: 2;
+    transition: .5s ease-out;
+
+    /* margin-left: 70px; */
+    /* left: -50%; */
+
+}
+
+.hori-line-hide:hover {
+    padding-left: 10px;
+}
+
+.interactive-scroller__cursor-container, .interactive-scroller__line-container {
+    transform-origin: 0 0;
+    height: 150px;
+    top: 50%;
+    right: 0;
+}
+
+.interactive-scroller__line {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    height: 150px;
+    width: 1px;
+    background-color: currentColor;
+    transform-origin: 0 0;
+    transform: scaleY(.33333);
+}
+
+.interactive-scroller__label {
+    bottom: 100%;
+    left: 50%;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    color: currentColor;
+    transform: scale(-1) translateX(50%);
+    margin-bottom: 20px;
+}
+
+div.service-block + div {
+    margin-top: 70px;
+}
+
+#text-12, #text-22, #text-32 {
+    display: none;
+}
+
+#text-1 {
+    display: block;
+}
+
+.icons {
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    top: auto;
+    left: 0;
+    right: 0;
+}
+
+.icon-item {
+    padding: 7px;
+}
+
+.icon-item:hover {
+    padding: 3px;
+    width: 30px;
+}
+
+.landing-vert-line {
+    display: block;
+    width: 90%;
+    position: relative;
+    text-align: right;
+}
+
+.landing-vert-section {
+    transform: rotate(-90deg);
+    position: relative;
+    font-size: 20px;
+    font-family: GothamPro;
+    letter-spacing: 0px;
+    color: black;
+    opacity: 1;
+    top: 40%;
+}
+
+
+/*colors*/
+
+#process-page div#burger-container {
+    z-index: 100;
+    padding: 10px;
+    right: 10px;
+    width: 60px;
+    /* margin-left: auto; */
+    height: max-content;
+    position: absolute;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: crosshair;
+
+}
+
+.sidebar {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    height: 100%;
+    font-family: "Lato";
+}
+
+.work-float{
+    position: absolute;
+    right: -14%;
+}
+
+
+.pink{
+    background: #F98B88;
+}
+
+li .service-block{
+    padding: 20px;
+    margin: 5px;
+}
+
+.works-logo-container{
+
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20%;
+	width: 100%;
+
+}
+
+.pc-screen{
+    width: 1100px;
+}
+.pc-screen:hover{
+    /*width: 1500px;*/
+    /*z-index: 5;*/
+    /*position: relative;*/
+}
+
+.mobile-screen{
+    width: 450px;
+}
+.mobile-screen:hover{
+    /*width: 750px;*/
+    /*z-index: 5;*/
+    /*position: relative;*/
+
+}
+
+.half-num {
+	font-size: 247px;
+	margin-left: -77%;
+    transition: margin-left 2s  ease-out;
+}
+.half-num.slide-right{
+    	font-size: 247px;
+	margin-left: 0%;
+    margin-right: 0%;
+
+}
+
+#process-page .vert-banner:nth-child(1){
+    z-index: 3;
+}
+#process-page .vert-banner:nth-child(2){
+    z-index: 2;
+}
+#process-page .vert-banner:nth-child(3){
+    z-index: 1;
+}

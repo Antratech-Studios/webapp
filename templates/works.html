@@ -1,10 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}{{ super() }}{% endblock %}
+
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+
+
+
+
+{% block nav %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block body %}
+    <div id="works-page" class="body-bg">
+            <div class="works-logo-container">
+            <img src="../static/works/kivuli/logo/kivuli.svg"width="200" alt="">
+        </div>
+
+    <div class="row d-flex align-items-center justify-content-center bg-light vh-100">
+        <div class="work-banner-container">
+
+            <img class="pc-screen"  src="../static/works/kivuli/mockups/laptopUI.svg"  alt="">
+            <img class="mobile-screen" src="../static/works/kivuli/mockups/mobileUI.svg"  alt="">
+        </div>
+    </div>
+
+          <div class="row vh-100 service-section no-gutters">
+        <div class="service-section-left  col-lg-7 col-sm-7 col-xl-7 col-md-7">
+            <div class="text-container h-100">
+                <div class="service-block landing-text-block ">
+                    <div class="section-title text-white subtitle"><sup class="number">01</sup>Web Development.</div>
+                    <div class="sm-text-wrapper text-white">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum
+                            quam,
+                            sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
+                            reprehenderit? Dolores fuga officia quam repellendus!</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="service-section-right col-lg-5 col-sm-5 col-xl-5 pink col-md-5">
+            <div class="work-img-wrapper">
+                <img class="work-float" src="../static/works/home%20UI.png" width="1500" alt="">
+            </div>
+        </div>
+
+
+        {#        <div class="left-col vh-100 col-sm-2 col-lg-2 col-xl-2">#}
+        {##}
+        {#        </div>#}
+
+        {#<div class="right-col vh-100 col-sm-1 col-lg-1 col-xl-1">#}
+        {##}
+        {#</div>#}
+    </div>
+
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+{% block script %}
+    {{ super() }}
+
+{% endblock %}
+

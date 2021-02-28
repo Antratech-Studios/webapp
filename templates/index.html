@@ -14,26 +14,37 @@
     {{ super() }}
 {% endblock %}
 
+{% block sidebar %}
+    {{ super() }}
+{% endblock %}
+
 
 {% block body %}
     <div class="row vh-100 landing no-gutters">
-        <div class="center-col ">
-            <div class="landing-text-block ">
+        <div class="col-sm-1 col-lg-1 col-md-1"></div>
+        <div class="center-col col-md-10 col-md-10 col-md-10 ">
+            <div class="text-container ">
                 <div class="title-block">
-                    <div id="text-1">Design.</div>
-                    <div id="text-2">Develop.</div>
-                    <div id="text-3">Deliver.</div>
+                    <div id="text-1">Design.<span id="text-12">Top tier Interfaces..</span></div>
+
+                    <div id="text-2">Develop.<span id="text-22">High End Solutions.</span></div>
+
+                    <div id="text-3">Deliver.<span id="text-32">Seamlessly and Swiftly.</span></div>
+
 
                 </div>
-                <div class="vert-section">
-                    <span class="vert-line"><span class="line-hide">Scroll</span></span>
+
+                <div class="sm-text-wrapper w-100">
+                    <p class="body-text">We are a design technology company specialized in delivering high-end custom
+                        web
+                        applications for businesses using industry leading technologies.Let us work hand-in-hand to
+                        turn your idea to a working product
+                        that will mirror your brand.</div>
+                <div class="hori-section">
+                    <span class="hori-line"><span class="hori-line-hide cta-text body-text"><a
+                            href="{{ url_for('contact') }}">Work with Us</a></span></span>
                 </div>
 
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
-                </div>
             </div>
 
 
@@ -47,43 +58,48 @@
         {##}
         {#</div>#}
     </div>
+
     <div class="row vh-100 service-section no-gutters">
-        <div class="service-section-left col-lg-8 col-sm-8 col-xl-8 col-md-8">
-            <div class="service-block landing-text-block ">
-                <div class="section-title"><sup class="number">01</sup>Web Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
+        <div class="service-section-left  col-lg-8 col-sm-8 col-xl-8 col-md-8">
+            <div class="text-container h-100">
+                <div class="service-block landing-text-block ">
+                    <div class="section-title text-white subtitle"><sup class="number">01</sup>Web Development.</div>
+                    <div class="sm-text-wrapper text-white">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum
+                            quam,
+                            sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
+                            reprehenderit? Dolores fuga officia quam repellendus!</p>
+                    </div>
+
+
                 </div>
+                <div class="service-block landing-text-block ">
+                    <div class="section-title text-white subtitle"><sup class="number">02</sup>User Interface Design.
+                    </div>
+                    <div class="sm-text-wrapper text-white">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum
+                            quam,
+                            sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
+                            reprehenderit? Dolores fuga officia quam repellendus!</p>
+                    </div>
 
 
-            </div>
-            <div class="service-block landing-text-block ">
-                <div class="section-title"><sup class="number">02</sup>User Interface Design.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
                 </div>
+                <div class="service-block landing-text-block ">
+                    <div class="section-title text-white subtitle"><sup class="number">03</sup>Ecommerce Development.
+                    </div>
+                    <div class="sm-text-wrapper text-white">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum
+                            quam,
+                            sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
+                            reprehenderit? Dolores fuga officia quam repellendus!</p>
+                    </div>
 
 
-            </div>
-            <div class="service-block landing-text-block ">
-                <div class="section-title"><sup class="number">03</sup>Ecommerce Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
                 </div>
-
-
             </div>
         </div>
         <div class="service-section-right col-lg-4 col-sm-4 col-xl-4 col-md-4">
-            <div class="vert-section">
-                <span class="vert-line"><span class="line-hide">Services</span></span>
-            </div>
 
         </div>
 
@@ -98,24 +114,25 @@
     </div>
     <div class="row vh-100 service-section no-gutters">
         <div class="service-section-right col-lg-4 col-sm-4 col-xl-4 col-md-4">
-            <div class="vert-section">
-                <span class="vert-line"><span class="line-hide">Works</span></span>
-            </div>
+            {% include'sidebar.html' %}
 
         </div>
 
         <div class="service-section-left col-lg-8 col-sm-8 col-xl-8 col-md-8">
-            <div class="service-block landing-text-block ">
-                <div class="section-title"><sup class="number">01</sup>Kivuli Tree Nusery.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
+            <div class="text-container h-100">
+                <div class="service-block landing-text-block ">
+                    <div class="section-title subtitle"><sup class="number">01</sup>Kivuli Tree Nusery.</div>
+                    <div class="sm-text-wrapper">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum
+                            quam,
+                            sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
+                            reprehenderit? Dolores fuga officia quam repellendus!</p>
+                    </div>
+
+
                 </div>
 
-
             </div>
-
         </div>
 
 
@@ -130,6 +147,7 @@
 {% endblock %}
 
 {% block footer %}
+    {{ super() }}
 
 {% endblock %}
 {% block script %}

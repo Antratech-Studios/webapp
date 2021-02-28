@@ -108,7 +108,7 @@ def services():
     return render_template('services.html')
 
 @app.route('/works')
-def worsk():
+def works():
     return render_template('works.html')
 
 @app.route('/works/')

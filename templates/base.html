@@ -13,33 +13,55 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <title>{% block title %}ANTRATECH{% endblock %}</title>
+        <title>{% block title %}ANTRATECH STUDIOS{% endblock %}</title>
 
 
     </head>
 {% endblock %}
 
-<body>
+<body class="body-bg">
 {% block nav %}
     <div class="top-navigation">
-        <nav class="top-nav navbar  navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xl">
+    <div class="p-2">
+        <nav class=" top-nav navbar  navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xl">
             <a class="navbar-brand" href="#"><img src="../static/LOGO.svg" alt="" width="80"></a>
-            <div id="burger-container">
-                <span id="bar-1"></span>
-                <span id="bar-2"></span>
-                <span id="bar-3"></span>
-            </div>
 
         </nav>
 
     </div>
+    </div>
 {% endblock %}
+{% block sidebar %}
+            <div class="sidebar d-flex flex-column align-items-center">
+            <div id="burger-container">
+                <div class="burger-tab" id="bar-1"></div>
+                <div class="burger-tab" id="bar-2"></div>
+                <div class="burger-tab" id="bar-3"></div>
+            </div>            <div class="landing-vert-section">
+                <span class="vert-line"><span class="line-hide">Scroll</span></span>
+            </div>
+
+            <div class="d-flex icons flex-column">
+                <a href="" class="icon-item"><img src="../static/social%20icons/025-instagram.svg" width="24" alt=""></a>
+                <a href="https://www.linkedin.com/company/antratech-studios" class="icon-item"><img src="../static/social%20icons/045-linkedin.svg" width="24" alt=""></a>
+                <a href="" class="icon-item"><img src="../static/social%20icons/021-facebook.svg" width="24" alt=""></a>
+                <a href="https://dribbble.com/antratechstudios" class="icon-item"><img
+                        src="../static/social%20icons/022-dribbble.svg" width="24" alt=""></a>
+                <a href="" class="icon-item"><img src="../static/social%20icons/048-behance.svg" width="24" alt=""></a>
+                {#                <a href="" class="icon-item"><img src="../static/social%20icons/038-github.svg" width="24" alt=""></a>#}
+                <a href="https://twitter.com/antratech" class="icon-item"><img src="../static/social%20icons/043-twitter.svg" width="24" alt=""></a>
+            </div>
+        </div>
+
+
+{% endblock %}
+
 {% block menu %}
         <div id="menu">
         <div class="row vh-100">
-            <div class="col-7">
+            <div class="col-7 d-flex align-items-center justify-content-center">
                 <ul>
-                    <li><a href="">
+                    <li><a href="{{ url_for('index') }}">
                         <div class="service-block landing-text-block ">
                             <div class="section-title"><sup class="number">01</sup>Home.</div>
                             <div class="sm-text-wrapper">
@@ -59,7 +81,7 @@
 
                         </div>
                     </a></li>
-                    <li><a href="">
+                    <li><a href="{{ url_for('works') }}">
                         <div class="service-block landing-text-block ">
                             <div class="section-title"><sup class="number">03</sup>Work.</div>
                             <div class="sm-text-wrapper">
@@ -69,7 +91,7 @@
 
                         </div>
                     </a></li>
-                    <li><a href="">
+                    <li><a href="{{ url_for('process') }}">
                         <div class="service-block landing-text-block ">
                             <div class="section-title"><sup class="number">04</sup>Process.</div>
                             <div class="sm-text-wrapper">
@@ -79,7 +101,7 @@
 
                         </div>
                     </a></li>
-                    <li><a href="">
+                    <li><a href="{{ url_for('company') }}">
                         <div class="service-block landing-text-block ">
                             <div class="section-title"><sup class="number">05</sup>Company.</div>
                             <div class="sm-text-wrapper">
@@ -89,9 +111,9 @@
 
                         </div>
                     </a></li>
-                    <li><a href="">
+                    <li><a href="{{ url_for('contact') }}">
                         <div class="service-block landing-text-block ">
-                            <div class="section-title"><sup class="number">06</sup>About Us.</div>
+                            <div class="section-title"><sup class="number">06</sup>Hire Us.</div>
                             <div class="sm-text-wrapper">
 
                             </div>
@@ -117,10 +139,10 @@
 
 {% endblock %}
 {% block footer %}
-    <div class="row vh-100 footer service-section no-gutters">
-        <div class="service-section-left col-lg-8 col-sm-8 col-xl-8 col-md-8">
-            <div class="service-block landing-text-block ">
-                <div class="section-title"><sup class="number">01</sup>Let's work together.</div>
+    <div class="row  h-75 footer service-section no-gutters">
+        <div class="text-container service-section-left col-lg-8 col-sm-8 col-xl-8 col-md-8">
+            <div class="p-5 service-block landing-text-block ">
+                <div class="section-title subtitle title"><sup class="number">01</sup>Let's work together.</div>
                 <div class="row">
                     <div class="col-4">
                         <ul>
@@ -140,10 +162,9 @@
             </div>
 
         </div>
-        <div class="service-section-right col-lg-4 col-sm-4 col-xl-4 col-md-4">
-            <div class="vert-section">
-                <span class="vert-line"><span class="line-hide">Contact</span></span>
-            </div>
+        <div class="text-container service-section-right col-lg-4 col-sm-4 col-xl-4 col-md-4">
+         {% include'sidebar.html' %}
+
 
         </div>
 

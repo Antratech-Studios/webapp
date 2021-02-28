@@ -21,9 +21,9 @@
 	.st4{fill:#12253F;stroke:#00FFFF;stroke-width:14.7254;stroke-miterlimit:10;}
 	.st5{fill:#F1F2F2;stroke:#231F20;stroke-width:9;stroke-miterlimit:10;}
 	.st6{fill:url(#SVGID_2_);stroke:#12253F;stroke-width:3;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#0511F2;stroke-width:34.7254;stroke-miterlimit:10;}
-	.st8{fill:none;stroke:#0511F2;stroke-width:34.7254;stroke-miterlimit:10;}
-	.st9{fill:none;stroke:#0511F2;stroke-width:34.7254;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-width:34.7254;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#000000;stroke-width:34.7254;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#000000;stroke-width:34.7254;stroke-miterlimit:10;}
 </style>
 <switch>
 	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
