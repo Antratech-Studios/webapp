@@ -21,84 +21,81 @@
 {% block body %}
     <div id="service-page">
     <div class="row vh-100">
-        <div class="vert-banner col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
+            <div class="vert-banner  d-flex flex-column col-md-4 col-lg-4 col-sm-4 col-xl-4">
+                <div class="half-num number">01</div>
 
-                <div class="section-title">Web Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
+                <div class="banner-wrapper">
+                    <div class="banner-text">
+                        <div class="service-block p-20 ">
+
+                            <div class="subtitle black">Web Development.</div>
+                            <div class="sm-text-wrapper">
+                                <p class="body black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consectetur dolorem nam nostrum quam,
+                                    sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla,
+                                    quisquam
+                                    reprehenderit? Dolores fuga officia quam repellendus!</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
                 </div>
 
-
             </div>
+            <div class="vert-banner d-flex flex-column col-md-4 col-lg-4 col-sm-4 col-xl-4">
+                <div class="half-num number">02</div>
+                <div class="banner-wrapper">
+                    <div class="banner-text">
+                        <div class="service-block p-20 ">
 
-                </div>
-                                            <div class="hori-section">
-                <span class="hori-line"><span class="hori-line-hide">Details</span></span>
-            </div>
+                            <div class="subtitle black">UI Design.</div>
+                            <div class="sm-text-wrapper">
+                                <p class="body black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consectetur dolorem nam nostrum quam,
+                                    sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla,
+                                    quisquam
+                                    reprehenderit? Dolores fuga officia quam repellendus!</p>
+                            </div>
 
-            </div>
 
-        </div>
-        <div class="vert-banner col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
+                        </div>
 
-                <div class="section-title">User Interface Design.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
+                    </div>
                 </div>
 
-
             </div>
+            <div class="vert-banner d-flex flex-column col-md-4 col-lg-4 col-sm-4 col-xl-4">
 
+                <div class="half-num number">03</div>
+                <div class="banner-wrapper">
+                    <div class="banner-text">
+                        <div class="service-block p-20 ">
+
+                            <div class="subtitle black">Ecommerce Development.</div>
+                            <div class="sm-text-wrapper">
+                                <p class="body black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consectetur dolorem nam nostrum quam,
+                                    sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla,
+                                    quisquam
+                                    reprehenderit? Dolores fuga officia quam repellendus!</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
                 </div>
-                                            <div class="hori-section">
-                <span class="hori-line"><span class="hori-line-hide">Details</span></span>
-            </div>
 
             </div>
-
-        </div>
-        <div class="vert-banner logo-bg col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
-
-                <div class="section-title">Ecommerce Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
-                </div>
-
-
-            </div>
-
-                </div>
-                                            <div class="hori-section">
-                <span class="hori-line"><span class="hori-line-hide">Details</span></span>
-            </div>
-
-            </div>
-
-        </div>
+ 
     </div>
     </div>
 {% endblock %}
 
 {% block footer %}
-
+{{ super() }}
 {% endblock %}
 {% block script %}
     {{ super() }}

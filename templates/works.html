@@ -16,17 +16,21 @@
 
 
 {% block body %}
-    <div id="works-page" class="body-bg">
+    <div id="works-page" class="body-bg ">
             <div class="works-logo-container">
             <img src="../static/works/kivuli/logo/kivuli.svg"width="200" alt="">
         </div>
 
-    <div class="row d-flex align-items-center justify-content-center bg-light vh-100">
-        <div class="work-banner-container">
+    <div class="row light-brown no-gutters d-flex align-items-center justify-content-center  vh-100">
+        <div class=" col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xl-8">
+                        <img class="pc-screen"  src="../static/works/kivuli/mockups/laptopUI.svg"  alt="">
 
-            <img class="pc-screen"  src="../static/works/kivuli/mockups/laptopUI.svg"  alt="">
-            <img class="mobile-screen" src="../static/works/kivuli/mockups/mobileUI.svg"  alt="">
         </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xl-4">
+                        <img class="mobile-screen" src="../static/works/kivuli/mockups/mobileUI.svg"  alt="">
+
+        </div>
+
     </div>
 
           <div class="row vh-100 service-section no-gutters">
@@ -47,7 +51,7 @@
         </div>
         <div class="service-section-right col-lg-5 col-sm-5 col-xl-5 pink col-md-5">
             <div class="work-img-wrapper">
-                <img class="work-float" src="../static/works/home%20UI.png" width="1500" alt="">
+                <img class="work-float" src="../static/works/kivuli/mockups/home%20UI.png" width="1500" alt="">
             </div>
         </div>
 
@@ -65,9 +69,7 @@
     </div>
 {% endblock %}
 
-{% block footer %}
 
-{% endblock %}
 {% block script %}
     {{ super() }}
 

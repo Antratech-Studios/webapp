@@ -19,7 +19,9 @@
     font-family: GothamProRegular;
     src: url(GothamProRegular.ttf);
 }
-
+html{
+    overflow: scroll;
+}
 nav {
     padding: 0;
 !important
@@ -620,6 +622,8 @@ div.service-block + div {
 .work-float{
     position: absolute;
     right: -14%;
+    width: 170%;
+    top: 4%;
 }
 
 
@@ -644,7 +648,7 @@ li .service-block{
 }
 
 .pc-screen{
-    width: 1100px;
+    width: 100%;
 }
 .pc-screen:hover{
     /*width: 1500px;*/
@@ -653,7 +657,7 @@ li .service-block{
 }
 
 .mobile-screen{
-    width: 450px;
+    width: 100%;
 }
 .mobile-screen:hover{
     /*width: 750px;*/
@@ -674,12 +678,20 @@ li .service-block{
 
 }
 
-#process-page .vert-banner:nth-child(1){
+#service-page .vert-banner:nth-child(1),#process-page .vert-banner:nth-child(1){
     z-index: 3;
 }
-#process-page .vert-banner:nth-child(2){
+#service-page .vert-banner:nth-child(2),#process-page .vert-banner:nth-child(2){
     z-index: 2;
 }
 #process-page .vert-banner:nth-child(3){
     z-index: 1;
+}
+
+.light-brown{
+    background-color: #f3e0cc;
+}
+
+#works-page{
+    overflow: hidden;
 }

@@ -5,9 +5,13 @@ $(document).ready(function(){
 		$('.navbar-brand').toggle()
 
 	});
-	$('.vert-banner .half-num').each( (i,value) => {
-	$(this).hover(  (e) => {
-		$(this).toggleClass('slide-right')})
+
+	// Transitions  elements with the same class on hover
+	$('.vert-banner').each(function (i,value) {
+	$(this).hover( function (e) {
+		$(this).children('.half-num').toggleClass('slide-right')
+	e.preventDefault()
+	})
 	})
 
 	// $('#text-1').on('mouseover',function () {
