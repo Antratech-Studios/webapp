@@ -106,7 +106,7 @@ a:hover {
 .body-text a:hover {
     text-decoration: none;
     text-underline: none;
-    color: #0511F2;
+    color: #64acff;
 }
 
 .navbar {
@@ -150,7 +150,7 @@ a:hover {
     position: relative;
     height: 5px;
     width: 100%;
-    background-color: black;
+    background-color: #FF7170;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -164,7 +164,8 @@ a:hover {
 }
 
 #burger-container div.burger-tab:hover {
-    background: #0511F2;
+    background: -webkit-linear-gradient(
+            -70deg, #ff7170, #ffe57f);
     width: 100%;
 
 
@@ -427,11 +428,11 @@ div.footer.service-section-left > .service-block {
 /*banner*/
 
 div .vert-banner {
-    border: white;
-    border-left: 2px;
-    border-right: 2px;
-    background-color: #f2f2f2;
-    color: black;
+
+    border-left: .5px solid rgb(0 123 255 / 0.25);
+    border-right: .5px solid rgb(0 123 255 / 0.25);
+    /*background-color: #f2f2f2;*/
+    /*color: black;*/
     border-style: none solid none solid;
     display: flex;
     align-items: center;
@@ -497,7 +498,7 @@ span.number > div.section-title {
     /*text-align: left;*/
     /*font: normal normal bold 31px/41px Segoe UI;*/
     /*letter-spacing: 0px;*/
-    color: black;
+    color: #FF7170;
     opacity: 1;
     font-family: "GothamPro";
 }
@@ -509,8 +510,12 @@ span.number > div.section-title {
     position: absolute;
     right: 65%;
     top: 50%;
-    border-top: 3px solid #0511F2;
+    border-top: 3px solid #FF7170;
     z-index: 1;
+}
+
+.hori-section a {
+    color: #FF7170;
 }
 
 .hori-line-hide {
@@ -564,11 +569,11 @@ div.service-block + div {
 }
 
 #text-12, #text-22, #text-32 {
-    display: none;
+    /*display: none;*/
 }
 
 #text-1 {
-    display: block;
+    /*display: block;*/
 }
 
 .icons {
@@ -582,11 +587,18 @@ div.service-block + div {
 
 .icon-item {
     padding: 7px;
+
 }
 
-.icon-item:hover {
-    /*padding: 3px;*/
-    /*width: 30px;*/
+.icon-item svg {
+    fill: #FF7170;
+
+    width: 24px;
+}
+
+.icon-item svg:hover {
+    fill: #64acff;
+
 }
 
 .landing-vert-line {
@@ -752,7 +764,7 @@ li .service-block {
 .form-input {
     width: 100%;
     margin: 10px;
-    border-bottom: 2px solid #0511F2;
+    border-bottom: 2px solid #040d21;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -844,7 +856,10 @@ li .service-block {
     color: white;
     height: 50px;
     border-style: none;
-    box-shadow: 0 1rem 3rem rgba(5, 17, 242, 0.57) !important;
+    /*box-shadow: 0 1rem 3rem rgba(5, 17, 242, 0.57) !important;*/
+        background: -webkit-linear-gradient(
+            -70deg, #db469f, #2188ff);
+    -webkit-box-decoration-break: clone;
 
 }
 
@@ -965,20 +980,51 @@ a.text-bg {
     -webkit-text-fill-color: transparent;
     -webkit-box-decoration-break: clone;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
 
-  padding: 10px;
+.text-orange-bg, .text-bg:hover {
+    background: -webkit-linear-gradient(
+            -70deg, #ff7170, #ffe57f);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    padding: 10px;
+}
+
 .grid-item {
 
 
-  padding: 20px;
+    padding: 20px;
 
-  text-align: left;
+    text-align: left;
 }
-.grid-item svg{
+
+.grid-item svg {
     width: 50px;
     height: 70px;
 }
+
+.logo {
+    width: 80px;
+}
+
+.grid-container svg {
+    fill: #FF7170;
+}
+
+.logo:hover {
+    stroke: #FF7170;
+}
+
+#text-1:hover span {display:none}
+#text-1:hover:before {content:"Different."}
+#text-2:hover span {display:none}
+#text-2:hover:before {content:"Agilely."}
+#text-3:hover span {display:none}
+#text-3:hover:before {content:"Seamlessly."}
