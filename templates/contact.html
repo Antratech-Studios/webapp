@@ -16,69 +16,92 @@
 
 
 {% block body %}
-    <div id="service-page">
-    <div class="row vh-100">
-        <div class="vert-banner col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
+    <div id="contact-page">
+        <div class="row vh-100">
+            <div class="col vh-100 center overflow-y-scroll">
+                <div id="contactForm" class="p-3 text-center">
+                    <form id="contact-form" action="{{ url_for('process_form') }}" method="POST">
+                        {{ contactForm.hidden_tag() }}
+                        <fieldset>
+                        {{ contactForm.fullname(class = "form-input",placeholder="Fullname") }}
+                            {% if contactForm.email.errors %}
+                                {{ contactForm.email(class = "form-input is-invalid",placeholder="Email") }}
+                                {% for error in contactForm.email.errors %}
+                                    <br>
+                                    <span class="errors">{{ error }}</span>
+                                    <br>
+                                {% endfor %}
+                            {% else %}
+                                {{ contactForm.email(class = "form-input",placeholder="Email") }}
+                            {% endif %}
 
-                <div class="section-title">Web Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
+
+                            {{ contactForm.company_name(class = "form-input",placeholder="Company/Business Name") }}
+                            {{ contactForm.company_age(class = "form-input",placeholder="How long have you been in business") }}
+                            {{ contactForm.website(class = "form-input",placeholder="Website(optional)") }}
+                            <br>
+                            <div class="">
+                                {% for choice in contactForm.range %}
+                                    <div class="custom-control custom-control-inline custom-checkbox">
+                                        {{ choice(class="custom-control-input") }}
+                                        {{ choice.label(class="custom-control-label") }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            {{ contactForm.budget(class = "form-input",placeholder="What's your Project budget in USD") }}
+                            {{ contactForm.timeline(class = "form-input",placeholder="What's your project timeline eg. 6 weeks") }}
+                            {{ contactForm.project_summary(class = "form-input",placeholder="Give us your Project Summary") }}
+                            {{ contactForm.source(class = "form-input",placeholder="Where did you here from us") }}
+
+                            <br>
+                            <div class="d-flex flex-wrap align-items-start">
+                                {% for choice in contactForm.service %}
+                                    <div class="custom-control custom-checkbox">
+                                        {{ choice(class="custom-control-input") }}
+                                        {{ choice.label(class="custom-control-label") }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <br>
+                            {{ contactForm.submit(class="submit-btn bg-blue",id = "start-project-btn") }}
+                            {#                                                        <div class="range">#}
+                            {##}
+                            {#                                {{ contactForm.range.label }}#}
+                            {#                                {{ contactForm.range(min=0, max=100,step=20,class="slider") }}#}
+                            {##}
+                            {#                                <div class="sliderticks">#}
+                            {#                                    <p>$400-$500</p>#}
+                            {#                                    <p>$500-$600</p>#}
+                            {#                                    <p>$700-$800</p>#}
+                            {#                                    <p>$900-$1000</p>#}
+                            {#                                    <p>$1000-$1100</p>#}
+                            {#                                    <p>$1200+</p>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+                        </fieldset>
+                    </form>
+
+
+                </div>
+            </div>
+            <div class="col bg-blue">
+                <div class="text-container h-100">
+                    <div class="service-block landing-text-block ">
+                        <div class="section-title text-white subtitle"><p class="subtitle text-white">Don't want to fill
+                            the form? <br> Send us an inquiry at <span class="black">business@antratechstudios.com</span></p>
+                        </div>
+                        <div class="sm-text-wrapper text-white">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid assumenda
+                                debitis delectus deserunt dolore doloremque eligendi ex in, maiores, maxime natus
+                                placeat quam qui quibusdam rem sed soluta voluptatibus.</p>
+                        </div>
+
+
+                    </div>
                 </div>
 
-
             </div>
-
-                </div>
-            </div>
-
         </div>
-        <div class="vert-banner col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
-
-                <div class="section-title">User Interface Design.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
-                </div>
-
-
-            </div>
-
-                </div>
-            </div>
-
-        </div>
-        <div class="vert-banner logo-bg col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
-
-                <div class="section-title">Ecommerce Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
-                </div>
-
-
-            </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
     </div>
 {% endblock %}
 

@@ -2,29 +2,41 @@
 
 @font-face {
     font-family: GothamPro;
-    src: url(GothamPro.ttf);
+    src: url(fonts/GothamPro.ttf);
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url(fonts/JosefinSans-Regular.ttf);
 }
 
 @font-face {
     font-family: Inc;
-    src: url(Inc.ttf);
+    src: url(fonts/Inc.ttf);
 }
 
 @font-face {
     font-family: GothamProLight;
-    src: url(GothamProLight.ttf);
+    src: url(fonts/GothamProLight.ttf);
 }
 
 @font-face {
     font-family: GothamProRegular;
-    src: url(GothamProRegular.ttf);
+    src: url(fonts/GothamProRegular.ttf);
 }
-html{
+
+html {
     overflow: scroll;
 }
+
 nav {
     padding: 0;
 !important
+}
+
+.dot-bg {
+    background: linear-gradient(90deg, #040d21 21px, transparent 1%) center, linear-gradient(#040d21 21px, transparent 1%) center, #a2facf;
+    background-size: 22px 22px;
 }
 
 .top-navigation div.container {
@@ -66,7 +78,7 @@ svg image[xlink|href*="temp"] {
     width: 100%;
 }
 
-.footer, .service-block ul li a {
+.footer ul li a, .service-block ul li a {
     display: block;
     color: white;
     text-decoration: none;
@@ -75,15 +87,22 @@ svg image[xlink|href*="temp"] {
 
 }
 
-.body-text a{
+.footer a {
+    float: left;
+    padding: 10px;
+}
+
+.body-text a {
     text-decoration: none;
     text-underline: none;
     color: black;
 }
+
 a:hover {
     text-decoration: none;
     text-underline: none;
 }
+
 .body-text a:hover {
     text-decoration: none;
     text-underline: none;
@@ -129,7 +148,7 @@ a:hover {
 #burger-container div.burger-tab {
     /*display: block;*/
     position: relative;
-    height: 3px;
+    height: 5px;
     width: 100%;
     background-color: black;
     opacity: 1;
@@ -190,11 +209,12 @@ a:hover {
 
 
 .landing {
-    background-color: #f2f2f2;
+    /*background-color: #f2f2f2;*/
     background-image: url("bg.svg");
     background-repeat: no-repeat;
     background-position: right;
 }
+
 .body-bg {
     background-image: url("bg.svg");
     background-repeat: no-repeat;
@@ -247,7 +267,7 @@ a:hover {
     font-family: "GothamPro";
     font-size: 100px;
     letter-spacing: 0px;
-    color: black;
+
     opacity: 1;
 }
 
@@ -286,7 +306,7 @@ a:hover {
     position: absolute;
     right: 44px;
     top: 50%;
-    border-top: 3px solid #0511F2;
+    border-top: 3px solid #64ACFF;
     z-index: 1;
 }
 
@@ -326,11 +346,11 @@ a:hover {
 /*sections*/
 
 .service-section-left {
-    background-color: #262626;
+    background-color: #f2f2f2;
 }
 
 .service-section-right {
-    background-color: #707070;
+    /*background-color: #707070;*/
 }
 
 /*blocks*/
@@ -354,7 +374,6 @@ a:hover {
 .service-block p {
     /*color: white;*/
 }
-
 
 
 .footer > div {
@@ -392,7 +411,7 @@ div.footer.service-section-left > .service-block {
     color: white;
 }
 
-#menu li {
+#menu li, .footer li {
     list-style: none;
     text-decoration: none;
 }
@@ -486,9 +505,9 @@ span.number > div.section-title {
 .hori-line::after {
     content: '';
     display: block;
-    width: 80%;
+    width: 34%;
     position: absolute;
-    right: 44px;
+    right: 65%;
     top: 50%;
     border-top: 3px solid #0511F2;
     z-index: 1;
@@ -499,7 +518,7 @@ span.number > div.section-title {
     position: relative;
     display: inline-block;
     padding-left: 30px;
-    background-color: #f2f2f2;
+    /*background-color: #f2f2f2;*/
     z-index: 2;
     transition: .5s ease-out;
 
@@ -541,7 +560,7 @@ span.number > div.section-title {
 }
 
 div.service-block + div {
-    margin-top: 70px;
+    /*margin-top: 70px;*/
 }
 
 #text-12, #text-22, #text-32 {
@@ -566,8 +585,8 @@ div.service-block + div {
 }
 
 .icon-item:hover {
-    padding: 3px;
-    width: 30px;
+    /*padding: 3px;*/
+    /*width: 30px;*/
 }
 
 .landing-vert-line {
@@ -581,7 +600,7 @@ div.service-block + div {
     transform: rotate(-90deg);
     position: relative;
     font-size: 20px;
-    font-family: GothamPro;
+    font-family: "GothamPro";
     letter-spacing: 0px;
     color: black;
     opacity: 1;
@@ -619,7 +638,7 @@ div.service-block + div {
     font-family: "Lato";
 }
 
-.work-float{
+.work-float {
     position: absolute;
     right: -14%;
     width: 170%;
@@ -627,39 +646,41 @@ div.service-block + div {
 }
 
 
-.pink{
+.pink {
     background: #F98B88;
 }
 
-li .service-block{
+li .service-block {
     padding: 20px;
     margin: 5px;
 }
 
-.works-logo-container{
+.works-logo-container {
 
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 20%;
-	width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
 
 }
 
-.pc-screen{
+.pc-screen {
     width: 100%;
 }
-.pc-screen:hover{
+
+.pc-screen:hover {
     /*width: 1500px;*/
     /*z-index: 5;*/
     /*position: relative;*/
 }
 
-.mobile-screen{
-    width: 100%;
+.mobile-screen {
+    width: 90%;
 }
-.mobile-screen:hover{
+
+.mobile-screen:hover {
     /*width: 750px;*/
     /*z-index: 5;*/
     /*position: relative;*/
@@ -667,31 +688,297 @@ li .service-block{
 }
 
 .half-num {
-	font-size: 247px;
-	margin-left: -77%;
-    transition: margin-left 2s  ease-out;
+    font-size: 247px;
+    margin-left: -77%;
+    transition: margin-left .7s ease-out;
 }
-.half-num.slide-right{
-    	font-size: 247px;
-	margin-left: 0%;
+
+.half-num.slide-right {
+    font-size: 247px;
+    margin-left: 0%;
     margin-right: 0%;
 
 }
 
-#service-page .vert-banner:nth-child(1),#process-page .vert-banner:nth-child(1){
+#service-page .vert-banner:nth-child(1), #process-page .vert-banner:nth-child(1) {
     z-index: 3;
 }
-#service-page .vert-banner:nth-child(2),#process-page .vert-banner:nth-child(2){
+
+#service-page .vert-banner:nth-child(2), #process-page .vert-banner:nth-child(2) {
     z-index: 2;
 }
-#process-page .vert-banner:nth-child(3){
+
+#process-page .vert-banner:nth-child(3) {
     z-index: 1;
 }
 
-.light-brown{
+.light-brown {
     background-color: #f3e0cc;
 }
 
-#works-page{
+.works-page {
     overflow: hidden;
+}
+
+.social-wrapper {
+    height: 6%;
+    overflow: hidden;
+    transition: height .5s ease-out;
+}
+
+.social-wrapper:hover {
+    height: 30%;
+}
+
+.dark-green {
+    background-color: #2e7453;
+}
+
+.black {
+    color: black;
+}
+
+.services-bg {
+    background-image: url("tech-meeting-flatlay.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.light-yellow {
+    background: #f3ca7b9e;
+}
+
+.form-input {
+    width: 100%;
+    margin: 10px;
+    border-bottom: 2px solid #0511F2;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 60px;
+
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*slider*/
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #D3D3D3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #0511F2;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #0511F2;
+    cursor: pointer;
+}
+
+.sliderticks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.sliderticks p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1px;
+    background: #D3D3D3;
+    height: 10px;
+    line-height: 40px;
+    margin: 0 0 20px 0;
+}
+
+.range {
+    width: 70%;
+}
+
+.bg-blue {
+    background-color: #0511f2;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+
+#contact-form {
+    width: 500px;
+    height: 500px;
+}
+
+.custom-control {
+    padding: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    color: white;
+    height: 50px;
+    border-style: none;
+    box-shadow: 0 1rem 3rem rgba(5, 17, 242, 0.57) !important;
+
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.text-blue {
+    color: #0511f2;
+}
+
+.works-info-container {
+    display: block;
+    position: absolute;
+    justify-content: start;
+    /* height: 100%; */
+    align-items: flex-end;
+    width: 100%;
+    /*padding: 20px;*/
+    /* bottom: -500px; */
+    top: 88%;
+}
+
+.works-info-container img {
+
+    margin-right: 10px;
+}
+
+.gotham-bold {
+    font-family: "GothamPro";
+}
+
+.sm-text-wrapper li {
+    padding: 5px;
+    margin: 5px;
+    vertical-align: middle;
+    list-style: none;
+
+}
+
+.sm-text-wrapper svg {
+    margin-right: 17px;
+}
+
+.stack {
+    /*margin-bottom: auto;*/
+    /*!*display: flex;*!*/
+    /*!* align-items: end; *!*/
+    /*position: absolute;*/
+    /*top: auto;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+}
+
+.stack svg, .stack img {
+    margin: 20px;
+}
+
+.work-logo {
+    width: 200px;
+    height: 79.9px;
+}
+
+svg text {
+    font-family: "JosefinSans";
+}
+
+.bg-black {
+    background: black;
+}
+
+#fullpage {
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+.text-bg {
+    background: -webkit-linear-gradient(
+            -70deg, #a2facf, #64acff);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+}
+
+a.text-bg {
+    background: -webkit-linear-gradient(
+            -70deg, #faa2a2, #64acff);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+
+}
+
+.dark-blue-bg {
+    background-color: #0c162d;
+}
+
+.text-light-grey {
+    color: #8193b2 !important;
+}
+
+.vert-line.text-bg {
+    background: -webkit-linear-gradient(
+            8deg, #a2facf, #64acff);
+}
+
+.text-pink-blue-bg {
+    background: -webkit-linear-gradient(
+            -70deg, #db469f, #2188ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  padding: 10px;
+}
+.grid-item {
+
+
+  padding: 20px;
+
+  text-align: left;
+}
+.grid-item svg{
+    width: 50px;
+    height: 70px;
 }
