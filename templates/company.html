@@ -18,70 +18,76 @@
     {{ super() }}
 {% endblock %}
 {% block body %}
-    <div id="service-page">
-    <div class="row vh-100">
-        <div class="vert-banner col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
+    <section class="bg-light" id="s-1">
+        <div class="row vh-100   no-gutters">
 
-                <div class="section-title">Web Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
+            <div class="center-col  col-md-6 col-md-6 col-md-6 ">
+                <div class="text-container ">
+                    <div class="title-block text-light-grey">
+                        <div id="" class="text-bg"><span id="">The A-team.</span></div>
+
+
+                    </div>
+                    {#<ul>#}
+                    {#                        <li class="active"><a class="scroll" href="#s-1">Home</a></li>#}
+                    {#                        <li class=""><a class="scroll" href="#s-2">Services</a></li>#}
+                    {#                        <li class=""><a class="scroll" href="#s-3">Works</a></li>#}
+                    {#                        <li class=""><a class="scroll" href="#s-4">Contact</a></li>#}
+                    {#                    </ul>#}
+                    <div class="sm-text-wrapper  w-100">
+                        <p class="body-text">We are a design technology company specialized in delivering high-end
+                            custom
+                            web
+                            applications for businesses using industry leading technologies.Let us work hand-in-hand
+                            to
+                            turn your idea to a working product
+                            that will mirror your brand.</div>
+                    <div class="hori-section">
+                    <span class="hori-line"><span class="hori-line-hide cta-text body-text"><a class=""
+                                                                                               href="{{ url_for('contact') }}">Work with Us</a></span></span>
+                    </div>
+
                 </div>
 
 
             </div>
+            <div class="col-md-6 center col-md-6 col-md-6">
+                <div class="d-flex">
 
+                    <div class="flip-card team-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front cjay-bg">
+                                                            <p class="body text-white  team-card-footer-text bottom">Founder & CEO</p>
+
+                            </div>
+                            <div class="flip-card-back p-3">
+                                <h3 class="text-bg">John Oula</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque cumque in ipsam,
+                                    ipsum laborum magnam obcaecati quia quis suscipit tempore vero. Amet beatae fugiat
+                                    iure, quidem quod sequi vitae. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card team-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front zulu-bg">
+                                                            <p class="body text-white  team-card-footer-text bottom">CTO</p>
+
+                            </div>
+                            <div class="flip-card-back p-3">
+                                <h3 class="text-bg">Mkhuzo Zulu</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque cumque in ipsam,
+                                    ipsum laborum magnam obcaecati quia quis suscipit tempore vero. Amet beatae fugiat
+                                    iure, quidem quod sequi vitae. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
 
         </div>
-        <div class="vert-banner col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
-
-                <div class="section-title">User Interface Design.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
-                </div>
-
-
-            </div>
-
-                </div>
-            </div>
-
-        </div>
-        <div class="vert-banner logo-bg col-md-4 col-lg-4 col-sm-4 col-xl-4">
-            <div class="banner-wrapper">
-                <div class="banner-text">
-                                <div class="service-block landing-text-block ">
-                                                        <span class="number">01</span>
-
-                <div class="section-title">Ecommerce Development.</div>
-                <div class="sm-text-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem nam nostrum quam,
-                        sapiente veritatis voluptate? Accusantium aliquid animi iusto mollitia nobis nulla, quisquam
-                        reprehenderit? Dolores fuga officia quam repellendus!</p>
-                </div>
-
-
-            </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-    </div>
+    </section>
 {% endblock %}
 
 {% block footer %}

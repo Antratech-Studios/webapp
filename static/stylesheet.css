@@ -419,7 +419,7 @@ div.footer.service-section-left > .service-block {
 
 .founder {
     background-repeat: no-repeat;
-    background-image: url(mugshot.png);
+    background-image: url(team/mugshot.png);
     background-position: center;
     background-blend-mode: multiply;
     background-color: #00000066;
@@ -757,8 +757,8 @@ li .service-block {
     background-position: center;
 }
 
-.light-yellow {
-    background: #f3ca7b9e;
+.light-pink {
+    background-color: #f48886;
 }
 
 .form-input {
@@ -857,7 +857,7 @@ li .service-block {
     height: 50px;
     border-style: none;
     /*box-shadow: 0 1rem 3rem rgba(5, 17, 242, 0.57) !important;*/
-        background: -webkit-linear-gradient(
+    background: -webkit-linear-gradient(
             -70deg, #db469f, #2188ff);
     -webkit-box-decoration-break: clone;
 
@@ -1022,9 +1022,409 @@ a.text-bg {
     stroke: #FF7170;
 }
 
-#text-1:hover span {display:none}
-#text-1:hover:before {content:"Different."}
-#text-2:hover span {display:none}
-#text-2:hover:before {content:"Agilely."}
-#text-3:hover span {display:none}
-#text-3:hover:before {content:"Seamlessly."}
+#text-1:hover span {
+    display: none
+}
+
+#text-1:hover:before {
+    content: "Different."
+}
+
+#text-2:hover span {
+    display: none
+}
+
+#text-2:hover:before {
+    content: "Agilely."
+}
+
+#text-3:hover span {
+    display: none
+}
+
+#text-3:hover:before {
+    content: "Seamlessly."
+}
+
+
+.banner-text svg {
+    fill: #FF7170;
+
+}
+
+.team-card {
+    height: 500px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 44px;
+}
+
+.cjay-bg {
+    background-image: url("team/mugshot_md.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.zulu-bg {
+    background-image: url("team/mk_sm.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover  .flip-card-inner ,.flip-card:hover .flip-card:active{
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: white;
+    color: white;
+    border-radius: 44px;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #040d21;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 44px;
+    text-align: justify;
+}
+
+.team-card-footer-text {
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+.slider{
+    display: none;
+}
+.mobile-view{
+    display: none;
+}
+@media (max-width: 768px) {
+    .title-block {
+        /*margin-left: 93px;*/
+
+        font-size: 60px;
+
+    }
+
+    .body-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.85;
+        letter-spacing: .2px;
+        max-width: 90%;
+    }
+
+    #s-1 .text-container {
+        /*padding: 5%;*/
+        /*width: 70%;*/
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        align-content: start;
+        height: 100%;
+
+    }
+
+    .landing-vert-section {
+        display: none;
+    }
+
+    #burger-container {
+        padding: 10px;
+        width: 70px;
+
+    }
+
+    .social-wrapper {
+        hheight: 6%;
+    }
+
+    .hori-line {
+        text-align: center;
+        width: 100%;
+    }
+
+    #s-1 .landing {
+        /*background-color: #f2f2f2;*/
+        background-image: none;
+
+    }
+
+    #s-2 .text-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    #s-2 .sm-text-wrapper {
+        font-size: 14px;
+
+    }
+
+    #s-2 .vh-100 {
+        height: fit-content;
+    }
+
+    ul, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .slider {
+        box-sizing: border-box;
+        background: black;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: block;
+    }
+
+    .slider .slides-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        cursor: -webkit-grab;
+        cursor: grab;
+        transition: transform .5s;
+    }
+
+    .slider:active .slides-container {
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+    }
+
+    .slider .slides-container.moving {
+        transition: none;
+    }
+
+    .slider .slides-container.moving .slide {
+        transition: none;
+    }
+
+    .slider .slides-container.moving .parallax {
+        transition: none;
+    }
+
+    .slider .slide {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #0c162d;
+        opacity: .8;
+        transform: scale(.9);
+        transform-origin: center;
+        transition: transform .5s, opacity .5s;
+    }
+
+    .slider .slide.current {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .slider .slide .parallax {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform .5s, opacity .5s;
+    }
+
+    .slider .slide.current .parallax {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .slider .slide .parallax {
+        position: absolute;
+        /*top: 50%;*/
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .grid-item {
+        text-align: center;
+        padding: 36px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+    }
+
+    .text-white.col-lg-7 {
+        display: none;
+    }
+
+    .services-bg {
+        display: none;
+    }
+
+    .works-box-container {
+        width: calc(100vw - 30px - 30px - 70px) !important;
+        height: 425px !important;
+        margin-right: 16px;
+        margin-bottom: 0;
+        display: block;
+    }
+
+    .footer-text {
+        width: 100%;
+        bottom: 15%;
+        left: 0;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        margin-top: 10%;
+        color: white;
+    }
+
+    #s-3 .col-lg-6, #s-3 .col-lg-6 {
+        display: none;
+    }
+
+    .arrow-icon {
+        position: relative;
+        top: 2px;
+        margin-right: 31px;
+        transition: transform .3s ease;
+    }
+
+    .service-section-right , .service-section-left {
+        display: none;
+    }
+
+    /*.slider .slide:nth-child(6n+2) { background: #e74c3c; }*/
+    /*.slider .slide:nth-child(6n+3) { background: #3498db; }*/
+    /*.slider .slide:nth-child(6n+4) { background: #9b59b6; }*/
+    /*.slider .slide:nth-child(6n+5) { background: #34495e; }*/
+    /*.slider .slide:nth-child(6n+6) { background: #f1c40f; }*/
+    .works-mobile-card {
+        height: 100%;
+        width: 100%;
+    }
+
+    .mobile-padding {
+        padding: 15px;
+    }
+
+    #s-3 img {
+        width: 50%;
+    }
+
+    #s-3 .landing {
+        background-blend-mode: luminosity;
+        background-position: bottom;
+    }
+
+    .work-logo {
+        height: 55px;
+        width: auto;
+        margin-top: 7%;
+    }
+
+    .smart-scroll {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .scrolled-up {
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #burger-container {
+        /* padding: 10px; */
+        width: 110px;
+        padding: 35px;
+    }
+
+    .icon-item svg {
+        fill: #FFF;
+    }
+
+    .founder {
+        display: none;
+    }
+
+    #menu .section-title {
+        font-size: 20px;
+        color: white;
+    }
+    .icons {
+	align-items: center;
+	position: absolute;
+	bottom: 0%;
+	top: auto;
+	left: 0;
+	right: 0;
+}
+    #s-3 .subtitle{
+        color: white;
+    }
+    .mobile-view{
+        display: block;
+    }
+}
+
+
