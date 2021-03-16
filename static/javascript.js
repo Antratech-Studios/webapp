@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#fullpage').fullpage()
+    // $('#fullpage').fullpage()
     $('#burger-container').click(function () {
         $(this).toggleClass('open');
         $('#menu').toggle()

@@ -17,9 +17,24 @@
 
 {% block body %}
     <div id="contact-page">
-        <div class="row vh-100">
-            <div class="col vh-100 center bg-light overflow-y-scroll">
-                <div id="contactForm" class="p-3 text-center">
+        <div class="page-container d-flex h-100">
+        <div class="contact-info-container dark-blue-bg">
+                <div class="text-container h-100">
+                    <div class="service-block landing-text-block ">
+                        <div class="section-title text-white subtitle"><p class="subtitle text-white">Don't want to fill
+                            the form? <br> Send us an inquiry at <span class="text-bg">business@antratechstudios.com</span></p>
+                        </div>
+                        <div class="sm-text-wrapper text-white">
+                            <p>Filling this form gives us an insight on your project as well as saving us time during the initial meeting.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="h-100 form-container center bg-light overflow-y-scroll">
+                <div id="contactForm" class="p-3 center text-center">
                     <form id="contact-form" action="{{ url_for('process_form') }}" method="POST">
                         {{ contactForm.hidden_tag() }}
                         <fieldset>
@@ -84,29 +99,13 @@
 
                 </div>
             </div>
-            <div class="col dark-blue-bg">
-                <div class="text-container h-100">
-                    <div class="service-block landing-text-block ">
-                        <div class="section-title text-white subtitle"><p class="subtitle text-white">Don't want to fill
-                            the form? <br> Send us an inquiry at <span class="text-bg">business@antratechstudios.com</span></p>
-                        </div>
-                        <div class="sm-text-wrapper text-white">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid assumenda
-                                debitis delectus deserunt dolore doloremque eligendi ex in, maiores, maxime natus
-                                placeat quam qui quibusdam rem sed soluta voluptatibus.</p>
-                        </div>
 
-
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block footer %}
-
+    {{ super() }}
 {% endblock %}
 {% block script %}
     {{ super() }}
