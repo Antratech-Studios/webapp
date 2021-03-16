@@ -1,0 +1,40 @@
+<VirtualHost *:80>
+
+
+                DocumentRoot /var/www/
+
+                logLevel debug
+                WSGIScriptAlias / /var/www/App/webapp.wsgi
+                ServerName www.100chinaguide.com
+                WSGIDaemonProcess App python-path=100chinaguide.com:/usr/local/lib/python3.7/site-packages processes=1 threads=15 display-name=%{GROUP}
+                WSGIProcessGroup App
+                WSGIApplicationGroup %{GLOBAL}
+                WSGIPassAuthorization On
+                WSGIChunkedRequest On
+                 ErrorLog ${APACHE_LOG_DIR}/error-5000.log
+                CustomLog ${APACHE_LOG_DIR}/access-5000.log combined
+
+                <Directory /var/www/App/webapp/>
+                        Order allow,deny
+                        Allow from all
+                </Directory>
+                                CustomLog ${APACHE_LOG_DIR}/access-5000.log combined
+
+                <Directory /var/www/App/>
+                        Order allow,deny
+                        Allow from all
+                </Directory>
+                Alias /static /var/www/App/webapp/static
+                <Directory /var/www/App/webapp/static/>
+
+                       Order allow,deny
+                        Allow from all
+                </Directory>
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                LogLevel warn
+                                CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+</VirtualHost>
+
+
