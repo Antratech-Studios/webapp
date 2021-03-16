@@ -556,7 +556,7 @@ def process_form():
 
                 print(response.json())
 
-            return response.json()
+            return redirect(url_for('home'))
 
 
 
@@ -565,9 +565,9 @@ def process_form():
         except:
             print('fail')
             jsonify('status','A problem occurred while sending the email')
-        return jsonify('status','submitted successfully')
+        return redirect(url_for('home'))
     else:
-        return jsonify('status','Please complete the form')
+        return redirect(url_for('contact'))
 
 
 
