@@ -1694,6 +1694,10 @@ a.text-bg {
 #contact-section{
     height: 100% !important;
 }
+.pc-landing .col-sm-8.pc , .col-sm-12.mobile{
+    display: none;
+}
+
 }
 
 
