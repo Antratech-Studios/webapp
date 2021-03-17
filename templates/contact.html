@@ -33,7 +33,7 @@
                 </div>
 
             </div>
-            <div class="h-100 form-container center bg-light overflow-y-scroll">
+            <div class="h-100 form-container d-none center bg-light overflow-y-scroll">
                 <div id="contactForm" class="p-3 center text-center">
                     <form id="contact-form" action="{{ url_for('process_form') }}" method="POST">
                         {{ contactForm.hidden_tag() }}
