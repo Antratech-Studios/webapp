@@ -175,7 +175,9 @@ a:hover {
 
 
 }
-
+.form-container{
+    width: 50%;
+}
 
 #burger-container div.burger-tab:nth-child(1) {
     top: 0px;
@@ -865,8 +867,9 @@ li .service-block {
 }
 
 #contact-form {
-	width: 80%;
-	height: 500px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 2%;
 }
 
 .custom-control {
@@ -1172,7 +1175,7 @@ a.text-bg {
 }
 
 .page-container {
-    flex-direction: row;
+    flex-direction: row-reverse;
 
 }
 .site-footer
@@ -1686,7 +1689,7 @@ a.text-bg {
     height: 100vh !important;
 }
 .form-container{
-    width: 50%;
+    width: auto;
 }
 #contact-section{
     height: 100% !important;
