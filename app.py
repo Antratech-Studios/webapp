@@ -414,7 +414,8 @@ def test():
         'response_type':'code',
         'scope':'AaaServer.profile.Read,ZohoCRM.modules.ALL',
         'redirect_uri':'http://127.0.0.1:5000/callback',
-        'access_type ':'offline'
+        'access_type ':'offline',
+        'prompt':'consent'
 
     }
     auth_code = requests.get(url=url+endpoint,params=params)
@@ -473,7 +474,7 @@ def callback():
 
 @app.route('/process')
 def process():
-    return render_template('process.html')\
+    return render_template('process.html')
 
 @app.route('/policy')
 def policy():
