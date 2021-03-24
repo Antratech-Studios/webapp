@@ -480,6 +480,10 @@ def process():
 def policy():
     return render_template('policy.html')
 
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
 @app.route('/form', methods=['POST'])
 def process_form():
     form = ContactForm()
