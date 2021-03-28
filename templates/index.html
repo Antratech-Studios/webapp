@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}{{ super() }}{% endblock %}
+{% block title %}Web Development Studio {% endblock %}
 
 {% block head %}
     {{ super() }}
 
 {% endblock %}
 
+    {% block description %}content="Antratech Studios is a design technology company specialized in
+        delivering high-end web applications for businesses.
+        We design, develop and deliver fully customized web applications that suit your business
+        needs, using industry leading technologies."{% endblock %}
+
+        {% block keywords %}content="web development,antratech, UI design, Design , Shopify , HTML, CSS, React.js, studio,frontend development,API"{% endblock %}
 
 
 
@@ -68,9 +74,9 @@
 
                         <li class="slide">
                             <div class="parallax text-container grid-container h-100">
-                                                                                            <div class="landing-vert-section">
-                                        <span class="vert-line"><span class="line-hide text-bg">Swipe</span></span>
-                                    </div>
+                                <div class="landing-vert-section">
+                                    <span class="vert-line"><span class="line-hide text-bg">Swipe</span></span>
+                                </div>
                                 <div class="service-block grid-item landing-text-block ">
 
                                     <svg viewBox="0 -25 424 424"
@@ -349,7 +355,7 @@
         <section id="s-3">
             <div class="row h-100 service-section no-gutters">
                 <div class=" light-pink landing p-4 center service-section-right col-lg-6 col-sm-6 col-xl-6 col-md-6">
-                    <img class="" width="40%" src="../static/works/kivuli/mockups/mobileHomeUI.png" alt="">
+                    <img class="" width="40%" src="../static/works/kivuli/mockups/mobileHomeUI-min.png" alt="">
 
                 </div>
 
@@ -462,7 +468,7 @@
                             </div>
 
                             <div class="center">
-                                <img class="p-4" src="../static/works/kivuli/mockups/mobileHomeUI.png" alt="">
+                                <img class="p-4" src="../static/works/kivuli/mockups/mobileHomeUI-min.png" alt="">
 
                             </div>
                             <span class="footer-text"><svg class="home__works__container__projects__item__cta__icon"

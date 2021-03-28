@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}{{ super() }}{% endblock %}
+{% block title %}Works{% endblock %}
 
 {% block head %}
     {{ super() }}
 
 {% endblock %}
 
+
+    {% block description %}content="We always aim at adding finesse to every project in our portfolio."{% endblock %}
+
+        {% block keywords %}content="web development,portfolio,policy,privacy,terms,antratech, UI design, Design , Shopify , HTML, CSS, React.js, studio,frontend development,API"{% endblock %}
 
 
 
@@ -473,7 +477,7 @@
                 </div>
                 <div class="service-section-right col-lg-5 col-sm-5 col-xl-5 light-brown col-md-5">
                     <div class="work-img-wrapper">
-                        <img class="work-float" src="../static/works/kivuli/mockups/home-UI.png" width="1500" alt="">
+                        <img class="work-float" src="../static/works/kivuli/mockups/home-UI-min.png" width="1500" alt="">
                     </div>
 
                 </div>
@@ -482,12 +486,15 @@
         </section>
         <section class="d-flex">
             <div class="row light-brown h-100 service-section no-gutters">
+                <div class=" d-none video-wrapper container-fluid">
+                    <video src="../static/works/kivuli/mockups/mobile-anim.mp4" autoplay type="video/mp4"></video>
 
+                </div>
                 <div class="">
-                    <img class="w-100" src="../static/works/kivuli/mockups/three-screens-png.png" alt="">
+                    <img class="w-100" src="../static/works/kivuli/mockups/three-screens-png-min.png" alt="">
                 </div>
                 <div class="  work-img-wrapper">
-                    <img class="laptop-mobile" src="../static/works/kivuli/mockups/home-UI.png" alt="">
+                    <img class="laptop-mobile" src="../static/works/kivuli/mockups/home-UI-min.png" alt="">
                 </div>
             </div>
 

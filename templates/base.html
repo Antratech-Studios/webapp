@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 {% block head %}
     <head>
 
-        <meta name="viewport" content="width=device-width , initial-scale=1.0" charset="UTF-8">
+
+            <meta name="viewport" content="width=device-width , initial-scale=1.0" charset="UTF-8">
+
+    <meta name="description" {% block description %}content=""{% endblock %}>
+        <meta name="keywords" {% block keywords %} content="" {% endblock %}>
+
         <link rel="stylesheet" href="{{ url_for('static',filename='stylesheet.css') }}">
         <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.css') }}">
 
@@ -14,7 +20,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../static/icons/favicon-16x16.png">
         <link rel="manifest" href="../static/icons/site.webmanifest">
         <link rel="manifest" href="../static/icons/site.webmanifest">
-        <title>{% block title %}ANTRATECH STUDIOS{% endblock %}</title>
+        <title>{% block title %}{% endblock %} | Antratech Studios</title>
 
 
     </head>
@@ -10816,7 +10822,7 @@ Fl+X69W33fLnL97/tN4v/6ya5WazPSwPq9/6VbPerfaH7W7V7H9s//IJXzp/YbF4/PL544d/56Fy
                         <li><a href="{{ url_for('company') }}">Company</a></li>
                         <li><a href="{{ url_for('contact') }}">Hire Us</a></li>
                         <li><a href="{{ url_for('policy') }}">Privacy Policy</a></li>
-                        <li><a href="{{ url_for('policy') }}">Terms of Use </a></li>
+                        <li><a href="{{ url_for('terms') }}">Terms of Use </a></li>
                     </ul>
                 </div>
 

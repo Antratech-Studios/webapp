@@ -2,7 +2,10 @@
 
 {% extends "base.html" %}
 
-{% block title %}{{ super() }}{% endblock %}
+{% block title %}Terms & Conditions{% endblock %}
+    {% block description %}content="Terms & conditions."{% endblock %}
+
+        {% block keywords %}content="web development,terms,antratech, UI design, Design , Shopify , HTML, CSS, React.js, studio,frontend development,API"{% endblock %}
 
 {% block head %}
     {{ super() }}
@@ -215,7 +218,7 @@ Calibri;color:#595959;mso-themecolor:text1;mso-themetint:166;">In order to resol
 {% endblock %}
 
 {% block footer %}
-
+    {{ super() }}
 {% endblock %}
 {% block script %}
     {{ super() }}
