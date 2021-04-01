@@ -5,9 +5,17 @@
     <head>
 
 
-            <meta name="viewport" content="width=device-width , initial-scale=1.0" charset="UTF-8">
-
-    <meta name="description" {% block description %}content=""{% endblock %}>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" charset="UTF-8">
+        <meta property="og:title" content="Web Development Studio | Antratech Studios">
+        <meta property="og:description" content="Antratech Studios is a web design and development company specialized in delivering top-notch web applications for businesses. We design ,develop and deliver fully customized web applications that suit your business needs , using industry leading technologies.">
+        <meta property="og:image" content="https://www.antratechstudios.com/static/ats-iso.png">
+        <meta property="og:url" content="https://www.antratechstudios.com">
+        <meta property="twitter:title" content="Web Development Studio | Antratech Studios">
+        <meta property="twitter:description" content="Antratech Studios is a web design and development company specialized in delivering top-notch web applications for businesses. We design ,develop and deliver fully customized web applications that suit your business needs , using industry leading technologies.">
+        <meta property="twitter:image" content="https://www.antratechstudios.com/static/ats-iso.png">
+        <meta property="twitter:url" content="https://www.antratechstudios.com">
+        <meta name="description" {% block description %}content=""{% endblock %}>
         <meta name="keywords" {% block keywords %} content="" {% endblock %}>
 
         <link rel="stylesheet" href="{{ url_for('static',filename='stylesheet.css') }}">
@@ -31,50 +39,105 @@
     <div class="top-navigation">
         <div class="p-2">
             <nav class=" top-nav smart-scroll navbar  navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xl">
-<!--?xml version="1.0" encoding="utf-8"?-->
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!--?xml version="1.0" encoding="utf-8"?-->
+                <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 
-	<!--ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/"-->
-	<!--ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/"-->
-	<!--ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/"-->
-	<!--ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/"-->
-	<!--ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/"-->
-	<!--ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/"-->
-	<!--ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/"-->
+                <!--ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/"-->
+                <!--ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/"-->
+                <!--ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/"-->
+                <!--ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/"-->
+                <!--ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/"-->
+                <!--ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/"-->
+                <!--ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/"-->
 
-<svg class="logo" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1500 1500" style="enable-background:new 0 0 1500 1500;" xml:space="preserve">
+                <svg class="logo" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;"
+                     xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1500 1500"
+                     style="enable-background:new 0 0 1500 1500;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#12253F;stroke:#00FFFF;stroke-miterlimit:10;}
-	.st1{fill:url(#SVGID_1_);stroke:#12253F;stroke-width:3;stroke-miterlimit:10;}
-	.st2{fill:#FFFFFF;}
-	.st3{fill:#12253F;}
-	.st4{fill:#12253F;stroke:#00FFFF;stroke-width:14.7254;stroke-miterlimit:10;}
-	.st5{fill:#F1F2F2;stroke:#231F20;stroke-width:9;stroke-miterlimit:10;}
-	.st6{fill:url(#SVGID_2_);stroke:#12253F;stroke-width:3;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#000000;stroke-width:14.7254;stroke-miterlimit:10;}
-	.st8{fill:none;stroke:#a2facf;stroke-width:14.7254;stroke-miterlimit:10;}
-	.st9{fill:none;stroke:#FFFFFF;stroke-width:14.7254;stroke-miterlimit:10;}
+	.st0 {
+        fill: #12253F;
+        stroke: #00FFFF;
+        stroke-miterlimit: 10;
+    }
+
+    .st1 {
+        fill: url(#SVGID_1_);
+        stroke: #12253F;
+        stroke-width: 3;
+        stroke-miterlimit: 10;
+    }
+
+    .st2 {
+        fill: #FFFFFF;
+    }
+
+    .st3 {
+        fill: #12253F;
+    }
+
+    .st4 {
+        fill: #12253F;
+        stroke: #00FFFF;
+        stroke-width: 14.7254;
+        stroke-miterlimit: 10;
+    }
+
+    .st5 {
+        fill: #F1F2F2;
+        stroke: #231F20;
+        stroke-width: 9;
+        stroke-miterlimit: 10;
+    }
+
+    .st6 {
+        fill: url(#SVGID_2_);
+        stroke: #12253F;
+        stroke-width: 3;
+        stroke-miterlimit: 10;
+    }
+
+    .st7 {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 14.7254;
+        stroke-miterlimit: 10;
+    }
+
+    .st8 {
+        fill: none;
+        stroke: #a2facf;
+        stroke-width: 14.7254;
+        stroke-miterlimit: 10;
+    }
+
+    .st9 {
+        fill: none;
+        stroke: #FFFFFF;
+        stroke-width: 14.7254;
+        stroke-miterlimit: 10;
+    }
 </style>
-<switch>
+                    <switch>
 	<foreignObject requiredExtensions="&amp;ns_ai;" x="0" y="0" width="1" height="1">
 		<i:pgfref xlink:href="#adobe_illustrator_pgf">
 		</i:pgfref>
 	</foreignObject>
-	<g i:extraneous="self">
+                        <g i:extraneous="self">
 		<g>
 			<path class="st8 svg-anim-1" d="M698.39,755.04c10.14,0,17.44-9.75,14.58-19.48L649,518.03l-0.04-0.15c-3.12-10.55-2.83-21.82,0.82-32.2
 				l88.01-250.27c29.27-83.23,146.97-83.23,176.24,0l308.35,876.84c14.62,41.57-16.23,85.12-60.3,85.12H903.84
 				c-35.34,0-66.45-23.31-76.36-57.24l-19.85-67.92c-7.97-27.25-32.96-45.98-61.35-45.98h-286.6l95.37-271.19H698.39z"></path>
-			<g>
+            <g>
 				<path class="st8 svg-anim-2" d="M553.86,755.04h141.3c10.14,0,17.44-9.75,14.58-19.48l-63.98-217.52l-0.04-0.15
 					c1.35-10.73,2.7-21.47,4.06-32.2C617.8,575.47,585.83,665.25,553.86,755.04z"></path>
-				<path class="st8 svg-anim-3" d="M824.24,1140.13l-19.86-67.94c-7.96-27.24-32.94-45.96-61.32-45.96H458.49l-30.26,86.06
+                <path class="st8 svg-anim-3" d="M824.24,1140.13l-19.86-67.94c-7.96-27.24-32.94-45.96-61.32-45.96H458.49l-30.26,86.06
 					c-14.61,41.55,16.22,85.08,60.27,85.08h227.9c61.4,0,122.8,0,184.21,0C865.26,1197.37,834.16,1174.06,824.24,1140.13z"></path>
 			</g>
 		</g>
 	</g>
 </switch>
-<i:pgf id="adobe_illustrator_pgf">
+                    <i:pgf id="adobe_illustrator_pgf">
 
 	eJzsvWmPHMmVJfqdAP9DvA8NSINmyM3cNtcbDBBb9tOD1BJUak0PGoMCVZUqccQiCyyWuvV+/Tvn
 2uK2eGQmFxXZ6kxjJjMjPMzNbbn7Pfcf/q/ffPHs8PXrP9w+m/fT7umTf/iH05vb529fv/n5Tl7e
@@ -10677,7 +10740,7 @@ Fl+X69W33fLnL97/tN4v/6ya5WazPSwPq9/6VbPerfaH7W7V7H9s//IJXzp/YbF4/PL544d/56Fy
 
         <div class="d-flex icons social-wrapper flex-column">
             <a href="https://www.linkedin.com/company/antratech-studios" class="icon-item">
-                <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                     <path d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h362c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm-256 406h-60v-210h60zm0-240h-60v-60h60zm210 240h-60v-120c0-16.539062-13.460938-30-30-30s-30 13.460938-30 30v120h-60v-210h60v11.308594c15.71875-4.886719 25.929688-11.308594 45-11.308594 40.691406.042969 75 36.546875 75 79.6875zm0 0"/>
                 </svg>
             </a>
@@ -10890,7 +10953,7 @@ Fl+X69W33fLnL97/tN4v/6ya5WazPSwPq9/6VbPerfaH7W7V7H9s//IJXzp/YbF4/PL544d/56Fy
             src="{{ url_for('static',filename='jquery-3.4.1.js') }}" type="text/javascript"
     ></script>
     <script
-         type="text/javascript"   src="{{ url_for('static',filename='baidu.js') }}"
+            type="text/javascript" src="{{ url_for('static',filename='baidu.js') }}"
     ></script>
     {#    <script#}
     {#            src="{{ url_for('static',filename='popper.min.js') }}" type="text/javascript"#}
@@ -10904,12 +10967,12 @@ Fl+X69W33fLnL97/tN4v/6ya5WazPSwPq9/6VbPerfaH7W7V7H9s//IJXzp/YbF4/PL544d/56Fy
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
     <script src="{{ url_for('static',filename='javascript.js') }}" type="text/javascript"></script>
-        <script
-         type="text/javascript"   src="{{ url_for('static',filename='zoho.js') }}"
+    <script
+            type="text/javascript" src="{{ url_for('static',filename='zoho.js') }}"
     ></script>
-{#    <script src="{{ url_for('static',filename='jquery.fullpage.js') }}" type="text/javascript"></script>#}
-{#    <script src="{{ url_for('static',filename='jquery.fullpage.min.js') }}" type="text/javascript"></script>#}
-{#    #}
+    {#    <script src="{{ url_for('static',filename='jquery.fullpage.js') }}" type="text/javascript"></script>#}
+    {#    <script src="{{ url_for('static',filename='jquery.fullpage.min.js') }}" type="text/javascript"></script>#}
+    {#    #}
     {#    <script>#}
     {#        var options = {#}
     {##}
