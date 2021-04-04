@@ -3,6 +3,7 @@ import datetime
 import json
 import os
 import socket
+import urllib
 
 import requests
 
@@ -418,9 +419,10 @@ def test():
         'prompt':'consent'
 
     }
-    auth_code = requests.get(url=url+endpoint,params=params)
-    print(auth_code.content)
+    auth_code = requests.post(url=url+endpoint,params=params)
     print(auth_code.json)
+    print(auth_code.url)
+    print( auth_code.encoding)
 
 
     return auth_code.url
