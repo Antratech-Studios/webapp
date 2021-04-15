@@ -90,7 +90,7 @@ def get_Host_name_IP(hostname):
 if get_Host_name_IP('CJAY') == True:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:@qwerty1234!@localhost/antradb'
 else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://power_user:'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://antrulez_admin:jordan222@127.0.0.1/antrulez_antra'
 admin = Admin(app, name='Management Panel', template_mode='bootstrap3')
 staticPath = op.join(op.dirname(__file__), 'static')
 
@@ -254,7 +254,7 @@ class ContactForm(FlaskForm):
     company_age = StringField('company_age')
     service = MultiCheckboxField(u'service', choices=[('End-to-end Development','End-to-end Development'),('Front-End Development','Front-End Development'),('Backend Development','Backend Development'),('Shopify Theme Development','Shopify Theme Development'),('Shopify App Development','Shopify App Development'),('UI Design','UI Design'),('Website Redesign','Website Redesign'),('Custom Ecommerce Store','Custom Ecommerce Store')])
     timeline = StringField('timeline')
-    range = MultiCheckboxField('Which Project bracket are you in',choices=[('$400-$500','$400-$500'),('$500-$600','$500-$600'),('$600-$700','$600-$700'),('$700-$800','$700-$800'),('$800-$900','$800-$900'),('$1000+','$1000+')])
+    range = MultiCheckboxField('What is your budget',choices=[('$400-$500','$400-$500'),('$500-$600','$500-$600'),('$600-$700','$600-$700'),('$700-$800','$700-$800'),('$800-$900','$800-$900'),('$1000+','$1000+')])
     project_summary = TextAreaField('project_summary')
     website = StringField('website')
     company_name = StringField('company_name')
@@ -505,8 +505,8 @@ def process_form():
 
         lead = Lead(
             email=form.email.data,
-            budget=form.budget.data,
-            company_age=form.company_age.data,
+            # budget=form.budget.data,
+            # company_age=form.company_age.data,
             service=services_data,
             timeline=form.timeline.data,
             range=form.range.data,
@@ -572,7 +572,7 @@ def process_form():
         except:
             print('fail')
             jsonify('status','A problem occurred while sending the email')
-        return redirect(url_for('home'))
+        return redirect(url_for('index'))
     else:
         return redirect(url_for('contact'))
 

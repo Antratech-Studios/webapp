@@ -178,7 +178,7 @@ a:hover {
 }
 
 .form-container {
-    width: 50%;
+    width: 60%;
 }
 
 #burger-container div.burger-tab:nth-child(1) {
@@ -1798,6 +1798,18 @@ svg.logo {
     .contact-info-container {
         overflow-wrap: break-word;
     }
+        .contact-info-container .text-container {
+
+    padding: 2%;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 25%;
+
+    height: 100%;
+    }
+.contact-info-container .text-bg{
+    font-size: 4.5vw;
+}
 
     #contact-form {
         width: 90%;

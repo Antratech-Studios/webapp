@@ -16,5 +16,23 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="db" uuid="3d8dfaca-cc74-4a45-84e8-25315125c1c3">
+      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="antrulez_antra@127.0.0.1" uuid="65155d2b-5bf0-4add-96ca-9f10f3fc76dd">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>antrulez_admin</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
