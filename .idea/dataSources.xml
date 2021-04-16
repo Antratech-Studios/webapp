@@ -27,5 +27,12 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/antrulez_antra</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="antra-db" uuid="027ffd74-0ea4-4b51-816e-5f22a50707f8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://antra-db.cv2by5opotk8.us-east-2.rds.amazonaws.com :5432/postgres</jdbc-url>
+    </data-source>
   </component>
 </project>
