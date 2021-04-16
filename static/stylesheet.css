@@ -1803,7 +1803,7 @@ svg.logo {
     padding: 2%;
     width: 80%;
     margin-left: auto;
-    margin-top: 25%;
+    /*margin-top: 25%;*/
 
     height: 100%;
     }

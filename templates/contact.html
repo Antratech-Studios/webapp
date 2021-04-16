@@ -3,11 +3,12 @@
 {% block title %}Contact Us{% endblock %}
 
 
-    {% block description %}content="Let's talk about your project.Contact us and we will reach back to you within 24 hours."{% endblock %}
+{% block description %}content="Let's talk about your project.Contact us and we will reach back to you within 24
+    hours."{% endblock %}
 
-    {% block keywords %}
-        content="web development, UI design,ecommerce, Design , Shopify , HTML, CSS, React.js, studio,frontend
-        development,API,contact"{% endblock %}
+{% block keywords %}
+    content="web development, UI design,ecommerce, Design , Shopify , HTML, CSS, React.js, studio,frontend
+    development,API,contact"{% endblock %}
 {% block head %}
     {{ super() }}
 
@@ -24,14 +25,28 @@
 {% block body %}
     <div id="contact-page">
         <div class="page-container d-flex h-100">
-        <div class="contact-info-container   dark-blue-bg">
+            <div class="contact-info-container  w-100 vh-100 dark-blue-bg">
                 <div class="text-container ">
                     <div class="service-block landing-text-block ">
-                        <div class="section-title text-white subtitle"><p class="subtitle text-white"><span class="">Don't want to fill
-                            the form?</span><br> Send us an inquiry at <span class="text-bg"><a href="mailto:business@antratechstudios.com">business@antratechstudios.com</a></span></p>
+                        <div class="section-title text-white subtitle">
+                            <p class="subtitle text-white">
+                                <span class="d-none">Don't want to fill
+                            the form?</span><br> Email:
+                                <span class="text-bg">
+                                    <a href="mailto:business@antratechstudios.com">business@antratechstudios.com</a>
+                                </span>
+                            </p>
+                            <p class="subtitle text-white">
+                                <span class="d-none">Don't want to fill
+                            the form?
+                            </span><br><p>Phone: <span class="text-bg"><a
+                                    href="tel:+8613023400537">+8613023400537</a></span>
+                            </p>
+                            <br><p>Timezone: <span class="text-bg">GMT+8</span></p>
                         </div>
                         <div class="sm-text-wrapper text-white">
-                            <p class="">Filling this form gives us an insight on your project as well as saving us time during the initial meeting.</p>
+                            <p class="d-none">Filling this form gives us an insight on your project as well as saving us
+                                time during the initial meeting.</p>
                         </div>
 
 
@@ -39,12 +54,12 @@
                 </div>
 
             </div>
-            <div class="h-100 form-container  center bg-light overflow-y-scroll">
+            <div class="h-100 form-container  d-none center bg-light overflow-y-scroll">
                 <div id="contactForm" class="p-3 center ">
                     <form id="contact-form" action="{{ url_for('process_form') }}" method="POST">
                         {{ contactForm.hidden_tag() }}
                         <fieldset>
-                        {{ contactForm.fullname(class = "form-input",placeholder="Fullname") }}
+                            {{ contactForm.fullname(class = "form-input",placeholder="Fullname") }}
                             {% if contactForm.email.errors %}
                                 {{ contactForm.email(class = "form-input is-invalid",placeholder="Email") }}
                                 {% for error in contactForm.email.errors %}
@@ -58,7 +73,7 @@
 
 
                             {{ contactForm.company_name(class = "form-input",placeholder="Company/Business Name") }}
-{#                            {{ contactForm.company_age(class = "form-input",placeholder="How long have you been in business") }}#}
+                            {#                            {{ contactForm.company_age(class = "form-input",placeholder="How long have you been in business") }}#}
                             {{ contactForm.website(class = "form-input",placeholder="Website(optional)") }}
                             <br>
                             {{ contactForm.range.label(placeholder="What's your project timeline eg. 6 weeks") }}
@@ -70,7 +85,7 @@
                                     </div>
                                 {% endfor %}
                             </div>
-{#                            {{ contactForm.budget(class = "form-input",placeholder="What's your Project budget in USD") }}#}
+                            {#                            {{ contactForm.budget(class = "form-input",placeholder="What's your Project budget in USD") }}#}
                             {{ contactForm.timeline(class = "form-input",placeholder="What's your project timeline eg. 6 weeks") }}
                             {{ contactForm.project_summary(class = "form-input",placeholder="Give us your Project Summary") }}
                             {{ contactForm.source(class = "form-input",placeholder="Where did you here from us") }}
