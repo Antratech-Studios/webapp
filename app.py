@@ -87,10 +87,8 @@ def get_Host_name_IP(hostname):
     except:
         print("Unable to get Hostname and IP")
 
-if get_Host_name_IP('CJAY') == True:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:@qwerty1234!@localhost/antradb'
-else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://super:jordan222@antra-db.cv2by5opotk8.us-east-2.rds.amazonaws.com/postgres'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://super:jordan222@antra-db.cv2by5opotk8.us-east-2.rds.amazonaws.com/postgres'
 admin = Admin(app, name='Management Panel', template_mode='bootstrap3')
 staticPath = op.join(op.dirname(__file__), 'static')
 

@@ -7,20 +7,6 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/antradb</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="db" uuid="3d8dfaca-cc74-4a45-84e8-25315125c1c3">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\ASUS\Desktop\flask-dashboard-coreui-master\db.sqlite3</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/sqlite-jdbc-3.25.1.jar</url>
-        </library>
-      </libraries>
-    </data-source>
     <data-source source="LOCAL" name="antrulez_antra@127.0.0.1" uuid="65155d2b-5bf0-4add-96ca-9f10f3fc76dd">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -30,9 +16,8 @@
     <data-source source="LOCAL" name="antra-db" uuid="027ffd74-0ea4-4b51-816e-5f22a50707f8">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://antra-db.cv2by5opotk8.us-east-2.rds.amazonaws.com :5432/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://antra-db.cv2by5opotk8.us-east-2.rds.amazonaws.com:5432/postgres</jdbc-url>
     </data-source>
   </component>
 </project>
