@@ -88,10 +88,11 @@ def get_Host_name_IP(hostname):
         print("Unable to get Hostname and IP")
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://super:jordan222@antra-db.cv2by5opotk8.us-east-2.rds.amazonaws.com:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://antrulez_user:jordan222@localhost:5432/antrulez_db'
 admin = Admin(app, name='Management Panel', template_mode='bootstrap3')
 staticPath = op.join(op.dirname(__file__), 'static')
 
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://username:password@localhost:5432/dbname'
 
 mail = Mail(app)
 
