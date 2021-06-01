@@ -39,9 +39,7 @@ nav {
     padding: 0;
 !important
 }
-body{
-    height: 100%;
-}
+
 .dot-bg {
     background: linear-gradient(90deg, #040d21 21px, transparent 1%) center, linear-gradient(#040d21 21px, transparent 1%) center, #a2facf;
     background-size: 22px 22px;
