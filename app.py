@@ -252,12 +252,12 @@ class ContactForm(FlaskForm):
     budget = StringField('budget')
     company_age = StringField('company_age')
     service = MultiCheckboxField(u'service', choices=[('End-to-end Development','End-to-end Development'),('Front-End Development','Front-End Development'),('Backend Development','Backend Development'),('Shopify Theme Development','Shopify Theme Development'),('Shopify App Development','Shopify App Development'),('UI Design','UI Design'),('Website Redesign','Website Redesign'),('Custom Ecommerce Store','Custom Ecommerce Store')])
-    timeline = StringField('timeline')
-    range = MultiCheckboxField('What is your budget',choices=[('$400-$500','$400-$500'),('$500-$600','$500-$600'),('$600-$700','$600-$700'),('$700-$800','$700-$800'),('$800-$900','$800-$900'),('$1000+','$1000+')])
+    timeline = MultiCheckboxField(u'What is your timeline', choices=[('<1m','Less than a month'),('1-3m','1 - 3 months'),('3-6m','3 - 6 months')])
+    range = MultiCheckboxField('What is your budget',choices=[('$500-$1000','$500-$1000'),('$1000-$5000','$1000-$5000'),('$5000-$10k','$5000-$10k'),('$10k+','$10k+')])
     project_summary = TextAreaField('project_summary')
     website = StringField('website')
     company_name = StringField('company_name')
-    source = StringField('source')
+    source = MultiCheckboxField(u'Where did you hear from us?', choices=[('Referral','A friend'),('Social Media','Social Media'),('Ads','Advertisement'),('event','Networking Event')])
     submit = SubmitField('Submit')
 
     # def validate_username(self,username):
@@ -501,17 +501,22 @@ def process_form():
         # company_name = request.args.get('company_name')
         services_data = request.form.getlist('service')
         services_data = str(services_data)
+        source_data = request.form.getlist('source')
+        source_data = str(source_data)
+        timeline_data = request.form.getlist('timeline')
+        timeline_data = str(timeline_data)
+
 
         lead = Lead(
             email=form.email.data,
             # budget=form.budget.data,
             # company_age=form.company_age.data,
             service=services_data,
-            timeline=form.timeline.data,
+            timeline=timeline_data,
             range=form.range.data,
             project_summary=form.project_summary.data,
             website=form.website.data,
-            source=form.source.data,
+            source=source_data,
             company_name=form.company_name.data)
 
         db.session.add(lead)

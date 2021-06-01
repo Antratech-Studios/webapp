@@ -23,9 +23,9 @@
 
 
 {% block body %}
-    <div id="contact-page">
+    <div id="contact-page" >
         <div class="page-container d-flex h-100">
-            <div class="contact-info-container  w-100 vh-100 dark-blue-bg">
+            <div class="contact-info-container  dark-blue-bg">
                 <div class="text-container ">
                     <div class="service-block landing-text-block ">
                         <div class="section-title text-white subtitle">
@@ -36,16 +36,14 @@
                                     <a href="mailto:business@antratechstudios.com">business@antratechstudios.com</a>
                                 </span>
                             </p>
-                            <p class="subtitle text-white">
-                                <span class="d-none">Don't want to fill
-                            the form?
-                            </span><br><p>Phone: <span class="text-bg"><a
+
+                            <p>Phone: <span class="text-bg"><a
                                     href="tel:+8613023400537">+8613023400537</a></span>
                             </p>
-                            <br><p>Timezone: <span class="text-bg">GMT+8</span></p>
+                            <p>Timezone: <span class="text-bg">GMT+8</span></p>
                         </div>
                         <div class="sm-text-wrapper text-white">
-                            <p class="d-none">Filling this form gives us an insight on your project as well as saving us
+                            <p class="">Filling this form gives us an insight on your project as well as saving us
                                 time during the initial meeting.</p>
                         </div>
 
@@ -54,75 +52,115 @@
                 </div>
 
             </div>
-            <div class="h-100 form-container  d-none center bg-light overflow-y-scroll">
+            <div class=" form-container  center  bg-light d-flex">
                 <div id="contactForm" class="p-3 center ">
                     <form id="contact-form" action="{{ url_for('process_form') }}" method="POST">
                         {{ contactForm.hidden_tag() }}
                         <fieldset>
-                            {{ contactForm.fullname(class = "form-input",placeholder="Fullname") }}
-                            {% if contactForm.email.errors %}
-                                {{ contactForm.email(class = "form-input is-invalid",placeholder="Email") }}
-                                {% for error in contactForm.email.errors %}
-                                    <br>
-                                    <span class="errors">{{ error }}</span>
-                                    <br>
-                                {% endfor %}
-                            {% else %}
-                                {{ contactForm.email(class = "form-input",placeholder="Email") }}
-                            {% endif %}
+                            <div class="tab">
+                                {{ contactForm.fullname(class = "form-input",placeholder="Fullname") }}
+                                {% if contactForm.email.errors %}
+                                    {{ contactForm.email(class = "form-input is-invalid",placeholder="Email") }}
+                                    {% for error in contactForm.email.errors %}
+                                        <br>
+                                        <span class="errors">{{ error }}</span>
+                                        <br>
+                                    {% endfor %}
+                                {% else %}
+                                    {{ contactForm.email(class = "form-input",placeholder="Email") }}
+                                {% endif %}
 
 
-                            {{ contactForm.company_name(class = "form-input",placeholder="Company/Business Name") }}
-                            {#                            {{ contactForm.company_age(class = "form-input",placeholder="How long have you been in business") }}#}
-                            {{ contactForm.website(class = "form-input",placeholder="Website(optional)") }}
-                            <br>
-                            {{ contactForm.range.label(placeholder="What's your project timeline eg. 6 weeks") }}
-                            <div class="">
+                                {{ contactForm.company_name(class = "form-input",placeholder="Company/Business Name") }}
+                                {#                            {{ contactForm.company_age(class = "form-input",placeholder="How long have you been in business") }}#}
+                                {{ contactForm.website(class = "form-input",placeholder="Website(optional)") }}
+                                {{ contactForm.project_summary(class = "form-input",placeholder="Give us your Project Summary") }}
+
+                            </div>
+                            <div class="tab">
+                                {{ contactForm.range.label(placeholder="What's your project timeline eg. 6 weeks") }}
+                                <br>
                                 {% for choice in contactForm.range %}
                                     <div class="custom-control custom-control-inline custom-checkbox">
                                         {{ choice(class="custom-control-input") }}
                                         {{ choice.label(class="custom-control-label") }}
                                     </div>
                                 {% endfor %}
-                            </div>
-                            {#                            {{ contactForm.budget(class = "form-input",placeholder="What's your Project budget in USD") }}#}
-                            {{ contactForm.timeline(class = "form-input",placeholder="What's your project timeline eg. 6 weeks") }}
-                            {{ contactForm.project_summary(class = "form-input",placeholder="Give us your Project Summary") }}
-                            {{ contactForm.source(class = "form-input",placeholder="Where did you here from us") }}
+                                <br>
+                                <br>
+                                {{ contactForm.timeline.label }}
+                                <br>
+                                <div class="checkbox-container ">
 
-                            <br>
-                            <div class="d-flex flex-wrap align-items-start">
-                                {% for choice in contactForm.service %}
-                                    <div class="custom-control  custom-checkbox">
-                                        {{ choice(class="custom-control-input") }}
-                                        {{ choice.label(class="custom-control-label") }}
-                                    </div>
-                                {% endfor %}
+
+                                    {% for choice in contactForm.timeline %}
+                                        <div class="custom-control  custom-checkbox">
+                                            {{ choice(class="custom-control-input") }}
+                                            {{ choice.label(class="custom-control-label") }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <br>
+
                             </div>
-                            <br>
-                            {{ contactForm.submit(class="submit-btn  ",id = "start-project-btn") }}
-                            {#                                                        <div class="range">#}
-                            {##}
-                            {#                                {{ contactForm.range.label }}#}
-                            {#                                {{ contactForm.range(min=0, max=100,step=20,class="slider") }}#}
-                            {##}
-                            {#                                <div class="sliderticks">#}
-                            {#                                    <p>$400-$500</p>#}
-                            {#                                    <p>$500-$600</p>#}
-                            {#                                    <p>$700-$800</p>#}
-                            {#                                    <p>$900-$1000</p>#}
-                            {#                                    <p>$1000-$1100</p>#}
-                            {#                                    <p>$1200+</p>#}
-                            {#                                </div>#}
-                            {#                            </div>#}
-                        </fieldset>
-                    </form>
+
+                            <div class="tab">
+                                <br>
+                                {{ contactForm.source.label }}
+                                <div class="checkbox-container ">
+
+
+                                    {% for choice in contactForm.source %}
+
+                                        <div class="custom-control  custom-checkbox ">
+                                            {{ choice(class="custom-control-input") }}
+                                            {{ choice.label(class="custom-control-label") }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <br>
+
+                                {{ contactForm.service.label }}
+
+                                <div class="checkbox-container d-flex">
+                                    {% for choice in contactForm.service %}
+                                        <div class="custom-control  custom-checkbox ">
+                                            {{ choice(class="custom-control-input") }}
+                                            {{ choice.label(class="custom-control-label") }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <br>
+                                {{ contactForm.submit(class="submit-btn  ",id = "start-project-btn") }}
+
+                                <br>
+                            </div>
+                             </fieldset>
+                                    <div class=" flex-column" >
+                                <div class="d-flex" >
+                                    <button type="button" class="tab-btn" id="prevBtn">Previous</button>
+                                    <br>
+                                    <button type="button" class="tab-btn" id="nextBtn">Next</button>
+                                    <br>
+
+                                </div>
+                                <!-- Circles which indicates the steps of the form: -->
+                                <div style="text-align:center;margin-top:40px;">
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+
+                                </div>
+
 
 
                 </div>
+
+                    </form>
             </div>
 
         </div>
+    </div>
     </div>
 
 {% endblock %}
@@ -134,4 +172,3 @@
     {{ super() }}
 
 {% endblock %}
-

@@ -39,12 +39,46 @@ nav {
     padding: 0;
 !important
 }
-
+body{
+    height: 100%;
+}
 .dot-bg {
     background: linear-gradient(90deg, #040d21 21px, transparent 1%) center, linear-gradient(#040d21 21px, transparent 1%) center, #a2facf;
     background-size: 22px 22px;
+
 }
 
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #0c162d;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
 .top-navigation div.container {
     padding: 0;
 }
@@ -57,7 +91,9 @@ ul {
 svg image[xlink|href*="temp"] {
     outline: 3px solid red;
 }
-
+.contact-info-container{
+    width: 50%;
+}
 .body-text {
 	font-size: 1.2vw;
 	font-weight: 400;
@@ -884,10 +920,14 @@ li .service-block {
 .overflow-y-scroll {
     overflow-y: scroll;
 }
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    font-weight: 300;
+}
 
 #contact-form {
     width: 80%;
-    height: 100vh;
     padding-top: 2%;
 }
 
@@ -895,9 +935,10 @@ li .service-block {
     padding: 10px;
 }
 
-.submit-btn {
+.submit-btn, .tab-btn {
     width: 100%;
     color: white;
+    margin: 2%;
     height: 50px;
     border-style: none;
     /*box-shadow: 0 1rem 3rem rgba(5, 17, 242, 0.57) !important;*/
@@ -906,7 +947,12 @@ li .service-block {
     -webkit-box-decoration-break: clone;
 
 }
+.checkbox-container{
+    /*display: flex;*/
+    flex-wrap: wrap;
 
+    align-items: start;
+}
 .left {
     display: flex;
     align-items: center;
@@ -1797,13 +1843,14 @@ svg.logo {
 
     .contact-info-container {
         overflow-wrap: break-word;
+        width: 100%;
     }
         .contact-info-container .text-container {
 
     padding: 2%;
     width: 80%;
     margin-left: auto;
-    /*margin-top: 25%;*/
+    margin-top: 25%;
 
     height: 100%;
     }
@@ -1813,7 +1860,7 @@ svg.logo {
 
     #contact-form {
         width: 90%;
-        height: 700px;
+        /*height: 700px;*/
     }
 
     #contactForm {
