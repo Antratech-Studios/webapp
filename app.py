@@ -87,8 +87,11 @@ def get_Host_name_IP(hostname):
     except:
         print("Unable to get Hostname and IP")
 
+if get_Host_name_IP('CJAY') == True:
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:@qwerty1234!@localhost/antradb'
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://antrulez_user:jordan222@localhost:3306/antrulez_db'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://antrulez_user:jordan222@localhost:3306/antrulez_db'
 admin = Admin(app, name='Management Panel', template_mode='bootstrap3')
 staticPath = op.join(op.dirname(__file__), 'static')
 
@@ -252,12 +255,12 @@ class ContactForm(FlaskForm):
     budget = StringField('budget')
     company_age = StringField('company_age')
     service = MultiCheckboxField(u'service', choices=[('End-to-end Development','End-to-end Development'),('Front-End Development','Front-End Development'),('Backend Development','Backend Development'),('Shopify Theme Development','Shopify Theme Development'),('Shopify App Development','Shopify App Development'),('UI Design','UI Design'),('Website Redesign','Website Redesign'),('Custom Ecommerce Store','Custom Ecommerce Store')])
-    timeline = MultiCheckboxField(u'What is your timeline', choices=[('<1m','Less than a month'),('1-3m','1 - 3 months'),('3-6m','3 - 6 months')])
-    range = MultiCheckboxField('What is your budget',choices=[('$500-$1000','$500-$1000'),('$1000-$5000','$1000-$5000'),('$5000-$10k','$5000-$10k'),('$10k+','$10k+')])
+    timeline = RadioField(u'What is your timeline', choices=[('<1m','Less than a month'),('1-3m','1 - 3 months'),('3-6m','3 - 6 months')])
+    range = RadioField('What is your budget',choices=[('$500-$1000','$500-$1000'),('$1000-$5000','$1000-$5000'),('$5000-$10k','$5000-$10k'),('$10k+','$10k+')])
     project_summary = TextAreaField('project_summary')
     website = StringField('website')
     company_name = StringField('company_name')
-    source = MultiCheckboxField(u'Where did you hear from us?', choices=[('Referral','A friend'),('Social Media','Social Media'),('Ads','Advertisement'),('event','Networking Event')])
+    source = RadioField(u'Where did you hear from us?', choices=[('Referral','A friend'),('Social Media','Social Media'),('Ads','Advertisement'),('event','Networking Event')])
     submit = SubmitField('Submit')
 
     # def validate_username(self,username):
@@ -501,10 +504,7 @@ def process_form():
         # company_name = request.args.get('company_name')
         services_data = request.form.getlist('service')
         services_data = str(services_data)
-        source_data = request.form.getlist('source')
-        source_data = str(source_data)
-        timeline_data = request.form.getlist('timeline')
-        timeline_data = str(timeline_data)
+
 
 
         lead = Lead(
@@ -512,11 +512,11 @@ def process_form():
             # budget=form.budget.data,
             # company_age=form.company_age.data,
             service=services_data,
-            timeline=timeline_data,
+            timeline=form.timeline.data,
             range=form.range.data,
             project_summary=form.project_summary.data,
             website=form.website.data,
-            source=source_data,
+            source=form.source.data,
             company_name=form.company_name.data)
 
         db.session.add(lead)
