@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Codebase.iml" filepath="$PROJECT_DIR$/.idea/Codebase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../stackiteWeb/.idea/stackiteWeb.iml" filepath="$PROJECT_DIR$/../../../stackiteWeb/.idea/stackiteWeb.iml" />
     </modules>
   </component>
 </project>
